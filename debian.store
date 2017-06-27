@@ -1,1 +1,1 @@
-{"parent": "release/r2b2/examples_rclpy_minimal_publisher", "base": "f436f9b", "trim": "", "previous": "2e6459f", "trimbase": ""}
+{"previous": "d0c32cf", "parent": "release/r2b2/examples_rclpy_minimal_publisher", "trimbase": "", "trim": "", "base": "25d1cd5"}

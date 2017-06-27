@@ -1,1 +1,1 @@
-{"parent": "release/r2b2/examples_rclcpp_minimal_composition", "base": "e2992e6", "trim": "", "previous": "9e548f4", "trimbase": ""}
+{"previous": "a16e9a1", "parent": "release/r2b2/examples_rclcpp_minimal_composition", "trimbase": "", "trim": "", "base": "1dc55e0"}

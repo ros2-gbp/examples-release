@@ -1,1 +1,1 @@
-{"parent": "debian/r2b2/examples_rclpy_minimal_subscriber", "base": "fedeaf5", "trim": "", "previous": "ddd55ec", "trimbase": ""}
+{"previous": "02c5d27", "parent": "debian/r2b2/examples_rclpy_minimal_subscriber", "trimbase": "", "trim": "", "base": "ded1f25"}

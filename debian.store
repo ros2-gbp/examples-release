@@ -1,1 +1,1 @@
-{"parent": "debian/r2b2/examples_rclpy_minimal_service", "trimbase": "", "previous": "99a03f3", "trim": "", "base": "186853b"}
+{"trimbase": "", "base": "00658c3", "parent": "debian/r2b2/examples_rclpy_minimal_service", "previous": "cf904aa", "trim": ""}

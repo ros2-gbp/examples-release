@@ -1,7 +1,9 @@
+from ament_python.data_files import get_data_files
 from ament_python.script_dir import install_scripts_to_libexec
 from setuptools import setup
 
 package_name = 'examples_rclpy_minimal_publisher'
+data_files = get_data_files(package_name)
 install_scripts_to_libexec(package_name)
 
 setup(
@@ -12,6 +14,7 @@ setup(
         'publisher_old_school',
         'publisher_local_function',
         'publisher_member_function'],
+    data_files=data_files,
     install_requires=['setuptools'],
     author='Mikael Arguedas',
     author_email='Mikael@osrfoundation.org',
@@ -29,9 +32,9 @@ setup(
     test_suite='test',
     entry_points={
         'console_scripts': [
-            'examples_rclpy_minimal_publisher_old_school = publisher_old_school:main',
-            'examples_rclpy_minimal_publisher_local_function = publisher_local_function:main',
-            'examples_rclpy_minimal_publisher_member_function = publisher_member_function:main',
+            'publisher_old_school = publisher_old_school:main',
+            'publisher_local_function = publisher_local_function:main',
+            'publisher_member_function = publisher_member_function:main',
         ],
     },
 )

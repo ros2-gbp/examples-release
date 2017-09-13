@@ -1,0 +1,12 @@
+Source: ros-r2b3-examples-rclpy-minimal-publisher
+Section: misc
+Priority: extra
+Maintainer: Mikael Arguedas <mikael@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-r2b3-ament-copyright, ros-r2b3-ament-flake8, ros-r2b3-ament-pep257, ros-r2b3-ros-workspace, python3-all, python3-setuptools
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-r2b3-examples-rclpy-minimal-publisher
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, ros-r2b3-rclpy, ros-r2b3-std-msgs, ros-r2b3-ros-workspace
+Description: Examples of minimal publishers using rclpy.

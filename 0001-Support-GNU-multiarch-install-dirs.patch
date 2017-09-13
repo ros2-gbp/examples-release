@@ -1,4 +1,4 @@
-From b038291a0253861cc57abf7a2b7e588f5c6ba103 Mon Sep 17 00:00:00 2001
+From a74e74d083906899f7d22bc42faaa45d1a84d578 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Tue, 12 Sep 2017 10:44:53 -0400
 Subject: [PATCH] Support GNU multiarch install dirs.

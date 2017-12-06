@@ -26,16 +26,18 @@ using namespace std::chrono_literals;
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  auto node = rclcpp::node::Node::make_shared("minimal_publisher");
+  auto node = rclcpp::Node::make_shared("minimal_publisher");
   auto publisher = node->create_publisher<std_msgs::msg::String>("topic");
   auto message = std::make_shared<std_msgs::msg::String>();
   auto publish_count = 0;
+  rclcpp::WallRate loop_rate(500ms);
+
   while (rclcpp::ok()) {
     message->data = "Hello, world! " + std::to_string(publish_count++);
-    printf("Publishing: [%s]\n", message->data.c_str());
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%s'", message->data.c_str())
     publisher->publish(message);
     rclcpp::spin_some(node);
-    rclcpp::utilities::sleep_for(500ms);
+    loop_rate.sleep();
   }
   rclcpp::shutdown();
   return 0;

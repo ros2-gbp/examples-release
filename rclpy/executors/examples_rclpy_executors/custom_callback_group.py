@@ -92,15 +92,17 @@ class ThrottledTalker(Node):
         msg = String()
         msg.data = 'Hello World: {0}'.format(self.i)
         self.i += 1
-        print('Publishing: "{0}"'.format(msg.data))
+        self.get_logger().info('Publishing: "{0}"'.format(msg.data))
         self.pub.publish(msg)
 
 
 def main(args=None):
     rclpy.init(args=args)
     try:
-        rclpy.spin(ThrottledTalker())
+        talker = ThrottledTalker()
+        rclpy.spin(talker)
     finally:
+        talker.destroy_node()
         rclpy.shutdown()
 
 

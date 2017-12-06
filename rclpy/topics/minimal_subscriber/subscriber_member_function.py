@@ -13,11 +13,12 @@
 # limitations under the License.
 
 import rclpy
+from rclpy.node import Node
 
 from std_msgs.msg import String
 
 
-class MinimalSubscriber(rclpy.Node):
+class MinimalSubscriber(Node):
 
     def __init__(self):
         super().__init__('minimal_subscriber')
@@ -28,7 +29,7 @@ class MinimalSubscriber(rclpy.Node):
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-        print('I heard: [%s]' % msg.data)
+        self.get_logger().info('I heard: "%s"' % msg.data)
 
 
 def main(args=None):

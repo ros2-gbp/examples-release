@@ -16,10 +16,11 @@ from examples_rclpy_executors.listener import Listener
 import rclpy
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
+from rclpy.node import Node
 from std_msgs.msg import String
 
 
-class DoubleTalker(rclpy.Node):
+class DoubleTalker(Node):
     """Publish messages to a topic using two publishers at different rates."""
 
     def __init__(self):
@@ -38,13 +39,15 @@ class DoubleTalker(rclpy.Node):
         msg = String()
         msg.data = 'Hello World: {0}'.format(self.i)
         self.i += 1
-        print('Publishing: "{0}"'.format(msg.data))
+        self.get_logger().info('Publishing: "{0}"'.format(msg.data))
         self.pub.publish(msg)
 
 
 def main(args=None):
     rclpy.init(args=args)
     try:
+        talker = DoubleTalker()
+        listener = Listener()
         # MultiThreadedExecutor executes callbacks with a thread pool. If num_threads is not
         # specified then num_threads will be multiprocessing.cpu_count() if it is implemented.
         # Otherwise it will use a single thread. This executor will allow callbacks to happen in
@@ -52,12 +55,15 @@ def main(args=None):
         # callbacks to be executed one at a time. The callbacks in Listener are free to execute in
         # parallel to the ones in DoubleTalker however.
         executor = MultiThreadedExecutor(num_threads=4)
-        executor.add_node(DoubleTalker())
-        executor.add_node(Listener())
+        executor.add_node(talker)
+        executor.add_node(listener)
+
         try:
             executor.spin()
         finally:
             executor.shutdown()
+            listener.destroy_node()
+            talker.destroy_node()
     finally:
         rclpy.shutdown()
 

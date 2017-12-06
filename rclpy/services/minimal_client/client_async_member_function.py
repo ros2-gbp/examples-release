@@ -12,22 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import time
-
 from example_interfaces.srv import AddTwoInts
 
 import rclpy
+from rclpy.node import Node
 
 
-class MinimalClientAsync(rclpy.Node):
+class MinimalClientAsync(Node):
 
     def __init__(self):
         super().__init__('minimal_client_async')
         self.cli = self.create_client(AddTwoInts, 'add_two_ints')
-        # TODO(mikaelarguedas) remove this once wait for service implemented
-        # wait for connection to be established
-        # (no wait for service in Python yet)
-        time.sleep(1)
+        while not self.cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again...')
         self.req = AddTwoInts.Request()
 
     def send_request(self):
@@ -47,7 +44,7 @@ def main(args=None):
         # for multiple pending requests. This will change once an executor model is implemented
         # In the future the response will not be stored in cli.response
         if minimal_client.cli.response is not None:
-            print(
+            minimal_client.get_logger().info(
                 'Result of add_two_ints: for %d + %d = %d' %
                 (minimal_client.req.a, minimal_client.req.b, minimal_client.cli.response.sum))
             break

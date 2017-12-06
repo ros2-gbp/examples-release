@@ -13,11 +13,12 @@
 # limitations under the License.
 
 import rclpy
+from rclpy.node import Node
 
 from std_msgs.msg import String
 
 
-class MinimalPublisher(rclpy.Node):
+class MinimalPublisher(Node):
 
     def __init__(self):
         super().__init__('minimal_publisher')
@@ -30,7 +31,7 @@ class MinimalPublisher(rclpy.Node):
         msg = String()
         msg.data = 'Hello World: %d' % self.i
         self.publisher_.publish(msg)
-        print('Publishing: "%s"' % msg.data)
+        self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1
 
 

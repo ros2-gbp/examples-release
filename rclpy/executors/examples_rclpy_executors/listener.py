@@ -13,25 +13,26 @@
 # limitations under the License.
 
 import rclpy
+from rclpy.node import Node
 from std_msgs.msg import String
 
 
-class Listener(rclpy.Node):
+class Listener(Node):
     """
     A node with a single subscriber.
 
     This class creates a node which prints messages it receives on a topic. Creating a node by
-    inheriting from rclpy.Node is recommended because it allows it to be imported and used by
+    inheriting from Node is recommended because it allows it to be imported and used by
     other scripts.
     """
 
     def __init__(self):
-        # Calls rclpy.Node.__init__('listener')
+        # Calls Node.__init__('listener')
         super().__init__('listener')
         self.sub = self.create_subscription(String, 'chatter', self.chatter_callback)
 
     def chatter_callback(self, msg):
-        print('I heard: [%s]' % msg.data)
+        self.get_logger().info('I heard: "%s"' % msg.data)
 
 
 def main(args=None):
@@ -46,8 +47,10 @@ def main(args=None):
     """
     rclpy.init(args=args)
     try:
-        rclpy.spin(Listener())
+        listener = Listener()
+        rclpy.spin(listener)
     finally:
+        listener.destroy_node()
         rclpy.shutdown()
 
 

@@ -1,0 +1,12 @@
+Source: ros-ardent-examples-rclcpp-minimal-timer
+Section: misc
+Priority: extra
+Maintainer: Morgan Quigley <morgan@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-ardent-ament-cmake, ros-ardent-rclcpp, ros-ardent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-ardent-examples-rclcpp-minimal-timer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-ardent-rclcpp, ros-ardent-ros-workspace
+Description: Examples of minimal nodes which have timers

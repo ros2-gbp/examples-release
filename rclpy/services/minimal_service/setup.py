@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_minimal_service'
 
 setup(
     name=package_name,
-    version='0.4.0',
+    version='0.5.0',
     packages=[],
     py_modules=[
         'service',
@@ -15,6 +15,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
     ],
     install_requires=['setuptools'],
+    zip_safe=True,
     author='Mikael Arguedas',
     author_email='mikael@osrfoundation.org',
     maintainer='Mikael Arguedas',

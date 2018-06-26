@@ -4,18 +4,20 @@ package_name = 'examples_rclpy_minimal_client'
 
 setup(
     name=package_name,
-    version='0.4.0',
+    version='0.5.0',
     packages=[],
     py_modules=[
         'client',
         'client_async',
-        'client_async_member_function'],
+        'client_async_member_function',
+        'client_async_callback'],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
     install_requires=['setuptools'],
+    zip_safe=True,
     author='Mikael Arguedas',
     author_email='mikael@osrfoundation.org',
     maintainer='Mikael Arguedas',
@@ -36,6 +38,7 @@ setup(
             'client_async = client_async:main',
             'client_async_member_function ='
             ' client_async_member_function:main',
+            'client_async_callback = client_async_callback:main',
         ],
     },
 )

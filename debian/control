@@ -1,0 +1,12 @@
+Source: ros-bouncy-examples-rclcpp-minimal-client
+Section: misc
+Priority: extra
+Maintainer: Morgan Quigley <morgan@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-bouncy-ament-cmake, ros-bouncy-example-interfaces, ros-bouncy-rclcpp, ros-bouncy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-bouncy-examples-rclcpp-minimal-client
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-bouncy-example-interfaces, ros-bouncy-rclcpp, ros-bouncy-ros-workspace
+Description: Examples of minimal service clients

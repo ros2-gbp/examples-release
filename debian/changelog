@@ -1,0 +1,26 @@
+ros-bouncy-examples-rclcpp-minimal-composition (0.5.0-0bionic) bionic; urgency=high
+
+  * Change #if to #ifdef #206 <https://github.com/ros2/examples/issues/206>
+  * Deprecate class loader headers (#204 <https://github.com/ros2/examples/issues/204>)
+  * Use std::chrono_literals only (#197 <https://github.com/ros2/examples/issues/197>)
+  * Contributors: Michael Carroll, Mikael Arguedas, Yutaka Kondo
+
+ -- Morgan Quigley <morgan@osrfoundation.org>  Mon, 25 Jun 2018 22:00:00 -0000
+
+ros-bouncy-examples-rclcpp-minimal-composition (0.4.0-0bionic) bionic; urgency=high
+
+  * Use logging (#190 <https://github.com/ros2/examples/issues/190>)
+  * 0.0.3
+  * call shutdown before exiting (#179 <https://github.com/ros2/examples/issues/179>)
+  * 0.0.2
+  * rename executables with shorter names (#177 <https://github.com/ros2/examples/issues/177>)
+  * install executables in package specific path (#173 <https://github.com/ros2/examples/issues/173>)
+  * use CMAKE_X_STANDARD and check compiler rather than platform
+  * use chrono types and literals (#158 <https://github.com/ros2/examples/issues/158>)
+  * c++14 not c++11 (#157 <https://github.com/ros2/examples/issues/157>)
+  * minimal example of how to compose nodes at compile or run time (#145 <https://github.com/ros2/examples/issues/145>)
+  * Contributors: Dirk Thomas, Mikael Arguedas, Morgan Quigley, William Woodall
+
+ -- Morgan Quigley <morgan@osrfoundation.org>  Thu, 07 Dec 2017 23:00:00 -0000
+
+

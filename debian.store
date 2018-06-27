@@ -1,1 +1,1 @@
-{"base": "3a6bae2", "trimbase": "", "previous": "b34878b", "trim": "", "parent": "debian/bouncy/examples_rclpy_minimal_client"}
+{"trim": "", "base": "bf5d4bc", "trimbase": "", "parent": "debian/bouncy/examples_rclpy_minimal_client", "previous": "2f01942"}

@@ -1,0 +1,12 @@
+Source: ros-bouncy-examples-rclcpp-minimal-service
+Section: misc
+Priority: extra
+Maintainer: Mikael Arguedas <mikael@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-bouncy-ament-cmake, ros-bouncy-example-interfaces, ros-bouncy-rclcpp, ros-bouncy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-bouncy-examples-rclcpp-minimal-service
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-bouncy-example-interfaces, ros-bouncy-rclcpp, ros-bouncy-ros-workspace
+Description: A minimal service server which adds two numbers

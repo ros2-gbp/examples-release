@@ -1,0 +1,12 @@
+Source: ros-bouncy-examples-rclcpp-minimal-subscriber
+Section: misc
+Priority: extra
+Maintainer: Mikael Arguedas <mikael@osrfoundation.org>
+Build-Depends: debhelper (>= 9.0.0), ros-bouncy-ament-cmake, ros-bouncy-rclcpp, ros-bouncy-std-msgs, ros-bouncy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-bouncy-examples-rclcpp-minimal-subscriber
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-bouncy-rclcpp, ros-bouncy-std-msgs, ros-bouncy-ros-workspace
+Description: Examples of minimal subscribers

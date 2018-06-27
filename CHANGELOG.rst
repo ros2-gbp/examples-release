@@ -2,6 +2,9 @@
 Changelog for package examples_rclpy_minimal_subscriber
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.1 (2018-06-27)
+------------------
+
 0.5.0 (2018-06-26)
 ------------------
 * add pytest markers to linter tests

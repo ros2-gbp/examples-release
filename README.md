@@ -1,3 +1,37 @@
+## examples (crystal) - 0.6.0-0
+
+The packages in the `examples` repository were released into the `crystal` distro by running `/usr/bin/bloom-release -n -r crystal examples --override-release-repository-push-url git@github.com:ros2-gbp/examples-release` on `Tue, 20 Nov 2018 15:13:42 -0000`
+
+These packages were released:
+- `examples_rclcpp_minimal_client`
+- `examples_rclcpp_minimal_composition`
+- `examples_rclcpp_minimal_publisher`
+- `examples_rclcpp_minimal_service`
+- `examples_rclcpp_minimal_subscriber`
+- `examples_rclcpp_minimal_timer`
+- `examples_rclpy_executors`
+- `examples_rclpy_minimal_client`
+- `examples_rclpy_minimal_publisher`
+- `examples_rclpy_minimal_service`
+- `examples_rclpy_minimal_subscriber`
+
+Version of package(s) in repository `examples`:
+
+- upstream repository: https://github.com/ros2/examples.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.6.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.9`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.13.0`
+- rosdistro version: `0.7.0`
+- vcstools version: `0.1.40`
+
+
 ## examples (bouncy) - 0.5.1-0
 
 The packages in the `examples` repository were released into the `bouncy` distro by running `/usr/bin/bloom-release examples -r bouncy -t bouncy` on `Wed, 27 Jun 2018 21:09:51 -0000`

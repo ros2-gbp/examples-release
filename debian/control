@@ -1,0 +1,12 @@
+Source: ros-crystal-examples-rclcpp-minimal-action-server
+Section: misc
+Priority: extra
+Maintainer: Jacob Perron <jacob@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-crystal-ament-cmake, ros-crystal-example-interfaces, ros-crystal-rclcpp, ros-crystal-rclcpp-action, ros-crystal-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-crystal-examples-rclcpp-minimal-action-server
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-crystal-example-interfaces, ros-crystal-rclcpp, ros-crystal-rclcpp-action, ros-crystal-ros-workspace
+Description: Minimal action server examples

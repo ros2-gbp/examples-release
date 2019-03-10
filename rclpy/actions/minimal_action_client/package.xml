@@ -1,14 +1,17 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
-  <name>examples_rclpy_minimal_subscriber</name>
+  <name>examples_rclpy_minimal_action_client</name>
   <version>0.6.3</version>
-  <description>Examples of minimal subscribers using rclpy.</description>
+  <description>Examples of minimal action clients using rclpy.</description>
+
   <maintainer email="sloretz@openrobotics.org">Shane Loretz</maintainer>
   <license>Apache License 2.0</license>
 
+  <author email="jacob@openrobotics.org">Jacob Perron</author>
+
+  <exec_depend>example_interfaces</exec_depend>
   <exec_depend>rclpy</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
 
   <!-- These test dependencies are optional
   Their purpose is to make sure that the code passes the linters -->

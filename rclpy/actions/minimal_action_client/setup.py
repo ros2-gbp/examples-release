@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'examples_rclpy_minimal_client'
+package_name = 'examples_rclpy_minimal_action_client'
 
 setup(
     name=package_name,
@@ -13,10 +13,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    author='Mikael Arguedas',
-    author_email='mikael@osrfoundation.org',
-    maintainer='Mikael Arguedas',
-    maintainer_email='mikael@osrfoundation.org',
+    author='Jacob Perron',
+    author_email='jacob@openrobotics.org',
+    maintainer='Shane Loretz',
+    maintainer_email='sloretz@openrobotics.org',
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
@@ -24,16 +24,14 @@ setup(
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
-    description='Examples of minimal service clients using rclpy.',
+    description='Examples of action clients using rclpy.',
     license='Apache License, Version 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'client = examples_rclpy_minimal_client.client:main',
-            'client_async = examples_rclpy_minimal_client.client_async:main',
-            'client_async_member_function ='
-            ' examples_rclpy_minimal_client.client_async_member_function:main',
-            'client_async_callback = examples_rclpy_minimal_client.client_async_callback:main',
+            'client = ' + package_name + '.client:main',
+            'client_cancel = ' + package_name + '.client_cancel:main',
+            'client_not_composable = ' + package_name + '.client_not_composable:main',
         ],
     },
 )

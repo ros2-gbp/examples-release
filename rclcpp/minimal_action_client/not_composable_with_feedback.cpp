@@ -50,7 +50,9 @@ int main(int argc, char ** argv)
 
   RCLCPP_INFO(g_node->get_logger(), "Sending goal");
   // Ask server to achieve some goal and wait until it's accepted
-  auto goal_handle_future = action_client->async_send_goal(goal_msg, feedback_callback);
+  auto send_goal_options = rclcpp_action::Client<Fibonacci>::SendGoalOptions();
+  send_goal_options.feedback_callback = feedback_callback;
+  auto goal_handle_future = action_client->async_send_goal(goal_msg, send_goal_options);
 
   if (rclcpp::spin_until_future_complete(g_node, goal_handle_future) !=
     rclcpp::executor::FutureReturnCode::SUCCESS)
@@ -78,7 +80,7 @@ int main(int argc, char ** argv)
 
   rclcpp_action::ClientGoalHandle<Fibonacci>::WrappedResult wrapped_result = result_future.get();
 
-  switch(wrapped_result.code) {
+  switch (wrapped_result.code) {
     case rclcpp_action::ResultCode::SUCCEEDED:
       break;
     case rclcpp_action::ResultCode::ABORTED:
@@ -93,8 +95,7 @@ int main(int argc, char ** argv)
   }
 
   RCLCPP_INFO(g_node->get_logger(), "result received");
-  for (auto number : wrapped_result.result->sequence)
-  {
+  for (auto number : wrapped_result.result->sequence) {
     RCLCPP_INFO(g_node->get_logger(), "%" PRId64, number);
   }
 

@@ -1,0 +1,12 @@
+Source: ros-eloquent-examples-rclcpp-minimal-composition
+Section: misc
+Priority: extra
+Maintainer: Jacob Perron <jacob@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-eloquent-ament-cmake, ros-eloquent-rclcpp, ros-eloquent-rclcpp-components, ros-eloquent-std-msgs, ros-eloquent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-examples-rclcpp-minimal-composition
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-eloquent-rclcpp, ros-eloquent-rclcpp-components, ros-eloquent-std-msgs, ros-eloquent-ros-workspace
+Description: Minimalist examples of composing nodes in the same process

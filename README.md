@@ -1,4 +1,6 @@
-ROS 2 examples
-==============
+# Minimal "publisher" cookbook recipes
 
-For instructions on how to try out our examples see the ROS 2 wiki: https://github.com/ros2/ros2/wiki
+This package contains a few different strategies for creating short nodes that blast out messages.
+The `publisher_old_school` recipe creates a talker node very similar to how it would be done in ROS 1 using rospy.
+The `publisher_local_function` recipe shows how to leverage the timers provided by ROS 2 to trigger message publication.
+The `publisher_member_function` recipe creates a class MinimalPublisher that sends messages periodically.

@@ -1,0 +1,12 @@
+Source: ros-eloquent-examples-rclcpp-minimal-action-server
+Section: misc
+Priority: extra
+Maintainer: Jacob Perron <jacob@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-eloquent-ament-cmake, ros-eloquent-example-interfaces, ros-eloquent-rclcpp, ros-eloquent-rclcpp-action, ros-eloquent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-examples-rclcpp-minimal-action-server
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-eloquent-example-interfaces, ros-eloquent-rclcpp, ros-eloquent-rclcpp-action, ros-eloquent-ros-workspace
+Description: Minimal action server examples

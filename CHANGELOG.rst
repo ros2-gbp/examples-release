@@ -2,6 +2,9 @@
 Changelog for package examples_rclcpp_minimal_action_server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.1 (2019-10-24)
+------------------
+
 0.7.3 (2019-05-29)
 ------------------
 * Fix small typo. (`#242 <https://github.com/ros2/examples/issues/242>`_)

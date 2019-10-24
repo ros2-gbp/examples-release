@@ -2,6 +2,9 @@
 Changelog for package examples_rclcpp_minimal_action_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.1 (2019-10-24)
+------------------
+
 0.7.3 (2019-05-29)
 ------------------
 * Use action client get result method (`#245 <https://github.com/ros2/examples/issues/245>`_)

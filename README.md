@@ -1,3 +1,42 @@
+## examples (eloquent) - 0.8.2-1
+
+The packages in the `examples` repository were released into the `eloquent` distro by running `/home/mjcarroll/.local/bin/bloom-release --ros-distro eloquent examples` on `Wed, 20 Nov 2019 06:04:33 -0000`
+
+These packages were released:
+- `examples_rclcpp_minimal_action_client`
+- `examples_rclcpp_minimal_action_server`
+- `examples_rclcpp_minimal_client`
+- `examples_rclcpp_minimal_composition`
+- `examples_rclcpp_minimal_publisher`
+- `examples_rclcpp_minimal_service`
+- `examples_rclcpp_minimal_subscriber`
+- `examples_rclcpp_minimal_timer`
+- `examples_rclcpp_multithreaded_executor`
+- `examples_rclpy_executors`
+- `examples_rclpy_minimal_action_client`
+- `examples_rclpy_minimal_action_server`
+- `examples_rclpy_minimal_client`
+- `examples_rclpy_minimal_publisher`
+- `examples_rclpy_minimal_service`
+- `examples_rclpy_minimal_subscriber`
+
+Version of package(s) in repository `examples`:
+
+- upstream repository: https://github.com/ros2/examples.git
+- release repository: https://github.com/ros2-gbp/examples-release.git
+- rosdistro version: `0.8.1-1`
+- old version: `0.8.1-1`
+- new version: `0.8.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.0`
+- catkin_pkg version: `0.4.14`
+- rosdep version: `0.17.1`
+- rosdistro version: `0.7.5`
+- vcstools version: `0.1.42`
+
+
 ## examples (eloquent) - 0.8.1-1
 
 The packages in the `examples` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --track eloquent --rosdistro eloquent examples` on `Thu, 24 Oct 2019 00:26:19 -0000`

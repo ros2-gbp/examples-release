@@ -1,0 +1,12 @@
+Source: ros-eloquent-examples-rclcpp-multithreaded-executor
+Section: misc
+Priority: optional
+Maintainer: Jacob Hassold <jhassold@dcscorp.com>
+Build-Depends: debhelper (>= 9.0.0), ros-eloquent-ament-cmake, ros-eloquent-rclcpp, ros-eloquent-std-msgs, ros-eloquent-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-eloquent-examples-rclcpp-multithreaded-executor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-eloquent-rclcpp, ros-eloquent-std-msgs, ros-eloquent-ros-workspace
+Description: Package containing example of how to implement a multithreaded executor

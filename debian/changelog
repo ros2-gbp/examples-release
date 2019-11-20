@@ -1,0 +1,83 @@
+ros-eloquent-examples-rclcpp-minimal-client (0.8.2-1bionic) bionic; urgency=high
+
+
+
+ -- Jacob Perron <jacob@openrobotics.org>  Tue, 19 Nov 2019 06:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.8.1-1bionic) bionic; urgency=high
+
+
+
+ -- Jacob Perron <jacob@openrobotics.org>  Thu, 24 Oct 2019 05:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.7.3-1bionic) bionic; urgency=high
+
+
+
+ -- Jacob Perron <jacob@openrobotics.org>  Wed, 29 May 2019 05:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.7.2-1bionic) bionic; urgency=high
+
+
+
+ -- Jacob Perron <jacob@openrobotics.org>  Mon, 20 May 2019 05:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.7.1-1bionic) bionic; urgency=high
+
+
+
+ -- Jacob Perron <jacob@openrobotics.org>  Wed, 08 May 2019 05:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.7.0-1bionic) bionic; urgency=high
+
+
+
+ -- Jacob Perron <jacob@openrobotics.org>  Sun, 14 Apr 2019 05:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.6.2-1bionic) bionic; urgency=high
+
+
+
+ -- Jacob Perron <jacob@openrobotics.org>  Fri, 08 Feb 2019 06:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.6.0-1bionic) bionic; urgency=high
+
+  * Added semicolons to all RCLCPP and RCUTILS macros. (#214 <https://github.com/ros2/examples/issues/214>)
+  * Contributors: Chris Lalancette
+
+ -- Jacob Perron <jacob@openrobotics.org>  Tue, 20 Nov 2018 06:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.5.1-1bionic) bionic; urgency=high
+
+  * make Mikael Arguedas the maintainer (#212 <https://github.com/ros2/examples/issues/212>)
+  * Contributors: Mikael Arguedas
+
+ -- Jacob Perron <jacob@openrobotics.org>  Wed, 27 Jun 2018 05:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.5.0-1bionic) bionic; urgency=high
+
+
+
+ -- Jacob Perron <jacob@openrobotics.org>  Tue, 26 Jun 2018 05:00:00 -0000
+
+ros-eloquent-examples-rclcpp-minimal-client (0.4.0-1bionic) bionic; urgency=high
+
+  * Remove node:: namespace (#192 <https://github.com/ros2/examples/issues/192>)
+  * Use logging (#190 <https://github.com/ros2/examples/issues/190>)
+  * 0.0.3
+  * call shutdown before exiting (#179 <https://github.com/ros2/examples/issues/179>)
+  * 0.0.2
+  * rename executables with shorter names (#177 <https://github.com/ros2/examples/issues/177>)
+  * install executables in package specific path #173 <https://github.com/ros2/examples/issues/173>
+  * use CMAKE_X_STANDARD and check compiler rather than platform
+  * use same node_names and service names in cpp and python (#172 <https://github.com/ros2/examples/issues/172>)
+  * add pedantic flag
+  * use chrono types and literals (#158 <https://github.com/ros2/examples/issues/158>)
+  * c++14 not c++11 (#157 <https://github.com/ros2/examples/issues/157>)
+  * fix #138 <https://github.com/ros2/examples/issues/138> which caused problems on windows because it wasn't cross-platform (#148 <https://github.com/ros2/examples/issues/148>)
+  * Minimal service and client (#138 <https://github.com/ros2/examples/issues/138>)
+  * Contributors: Dirk Thomas, Mikael Arguedas, Morgan Quigley, William Woodall, dhood
+
+ -- Jacob Perron <jacob@openrobotics.org>  Fri, 08 Dec 2017 06:00:00 -0000
+
+

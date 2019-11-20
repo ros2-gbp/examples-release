@@ -1,1 +1,1 @@
-{"trim": "", "base": "0055e27", "trimbase": "", "parent": "release/eloquent/examples_rclcpp_minimal_client", "previous": "085b34f"}
+{"base": "c54f5962", "parent": "release/eloquent/examples_rclcpp_minimal_client", "previous": "5fe2fb3f", "trim": "", "trimbase": ""}

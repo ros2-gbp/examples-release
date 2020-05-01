@@ -1,0 +1,12 @@
+Source: ros-foxy-examples-rclcpp-minimal-action-server
+Section: misc
+Priority: optional
+Maintainer: Jacob Perron <jacob@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-example-interfaces, ros-foxy-rclcpp, ros-foxy-rclcpp-action, ros-foxy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-foxy-examples-rclcpp-minimal-action-server
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-example-interfaces, ros-foxy-rclcpp, ros-foxy-rclcpp-action, ros-foxy-ros-workspace
+Description: Minimal action server examples

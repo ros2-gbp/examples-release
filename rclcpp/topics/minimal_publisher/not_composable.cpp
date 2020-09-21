@@ -12,8 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include <iostream>
 #include <chrono>
+#include <string>
+
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
@@ -39,7 +40,7 @@ int main(int argc, char * argv[])
     try {
       publisher->publish(message);
       rclcpp::spin_some(node);
-    } catch (const rclcpp::exceptions::RCLError &e) {
+    } catch (const rclcpp::exceptions::RCLError & e) {
       RCLCPP_ERROR(
         node->get_logger(),
         "unexpectedly failed with %s",

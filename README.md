@@ -1,3 +1,4 @@
-# Minimal action client cookbook recipes
+ROS 2 examples
+==============
 
-This package contains a few examples that show how to create action clients.
+To see some of these examples in use, visit the ROS 2 Tutorials page: https://index.ros.org/doc/ros2/Tutorials/

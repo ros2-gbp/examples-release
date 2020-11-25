@@ -2,26 +2,12 @@
 Changelog for package examples_rclpy_minimal_action_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.10.0 (2020-09-21)
--------------------
-* Added missing linting tests (`#287 <https://github.com/ros2/examples/issues/287>`_)
-* Contributors: Allison Thackston
-
-0.9.2 (2020-06-01)
+0.7.5 (2020-11-24)
 ------------------
+* Add common linters. (`#265 <https://github.com/ros2/examples/issues/265>`_)
+* Contributors: Alejandro Hernández Cordero, Allison Thackston
 
-0.9.1 (2020-05-26)
-------------------
-
-0.9.0 (2020-04-30)
-------------------
-
-0.8.2 (2019-11-19)
-------------------
-* Fix client_cancel example. (`#258 <https://github.com/ros2/examples/issues/258>`_)
-* Contributors: Michel Hidalgo
-
-0.8.1 (2019-10-24)
+0.7.4 (2019-08-01)
 ------------------
 
 0.7.3 (2019-05-29)

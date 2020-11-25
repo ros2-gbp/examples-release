@@ -34,14 +34,12 @@ def main(args=None):
     while rclpy.ok():
         rclpy.spin_once(node)
         if future.done():
-            try:
-                result = future.result()
-            except Exception as e:
-                node.get_logger().info('Service call failed %r' % (e,))
-            else:
+            if future.result() is not None:
                 node.get_logger().info(
                     'Result of add_two_ints: for %d + %d = %d' %
-                    (req.a, req.b, result.sum))
+                    (req.a, req.b, future.result().sum))
+            else:
+                node.get_logger().info('Service call failed %r' % (future.exception(),))
             break
 
     node.destroy_node()

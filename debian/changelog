@@ -1,0 +1,76 @@
+ros-dashing-examples-rclpy-minimal-action-server (0.7.5-2bionic) bionic; urgency=high
+
+  * Add missing linting tests. (#287 <https://github.com/ros2/examples/issues/287>)
+  * Contributors: Allison Thackston
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Tue, 24 Nov 2020 08:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.7.4-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Thu, 01 Aug 2019 07:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.7.3-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Wed, 29 May 2019 07:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.7.2-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Mon, 20 May 2019 07:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.7.1-2bionic) bionic; urgency=high
+
+  * Rename action state transitions (#234 <https://github.com/ros2/examples/issues/234>)
+  * Contributors: Jacob Perron
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Wed, 08 May 2019 07:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.7.0-2bionic) bionic; urgency=high
+
+  * Added rclpy action examples (#222 <https://github.com/ros2/examples/issues/222>)
+  * Contributors: Jacob Perron
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Sun, 14 Apr 2019 07:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.6.2-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Fri, 08 Feb 2019 08:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.6.1-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Fri, 07 Dec 2018 08:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.6.0-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Tue, 20 Nov 2018 08:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.5.1-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Wed, 27 Jun 2018 07:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.5.0-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Tue, 26 Jun 2018 07:00:00 -0000
+
+ros-dashing-examples-rclpy-minimal-action-server (0.4.0-2bionic) bionic; urgency=high
+
+
+
+ -- Shane Loretz <sloretz@openrobotics.org>  Fri, 08 Dec 2017 08:00:00 -0000
+
+

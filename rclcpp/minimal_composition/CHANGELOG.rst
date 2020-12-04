@@ -2,12 +2,15 @@
 Changelog for package examples_rclcpp_minimal_composition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.7.5 (2020-11-24)
+0.8.3 (2020-12-04)
 ------------------
-* Add common linters. (`#265 <https://github.com/ros2/examples/issues/265>`_)
-* Contributors: Alejandro Hernández Cordero, Allison Thackston
+* Added common linters (`#265 <https://github.com/ros2/examples/issues/265>`_)
+* Contributors: Alejandro Hernández Cordero
 
-0.7.4 (2019-08-01)
+0.8.2 (2019-11-19)
+------------------
+
+0.8.1 (2019-10-24)
 ------------------
 
 0.7.3 (2019-05-29)

@@ -2,11 +2,16 @@
 Changelog for package examples_rclpy_minimal_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.7.5 (2020-11-24)
+0.8.3 (2020-12-04)
 ------------------
 
-0.7.4 (2019-08-01)
+0.8.2 (2019-11-19)
 ------------------
+
+0.8.1 (2019-10-24)
+------------------
+* future.result() raises if it fails (`#253 <https://github.com/ros2/examples/issues/253>`_)
+* Contributors: Shane Loretz
 
 0.7.3 (2019-05-29)
 ------------------

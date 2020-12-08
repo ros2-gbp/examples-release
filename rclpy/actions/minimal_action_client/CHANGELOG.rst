@@ -2,11 +2,22 @@
 Changelog for package examples_rclpy_minimal_action_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.8.3 (2020-12-04)
+0.9.4 (2020-12-08)
 ------------------
-* fixed eloquent errors
 * Added missing linting tests (`#287 <https://github.com/ros2/examples/issues/287>`_)
 * Contributors: Allison Thackston
+
+0.9.3 (2020-06-23)
+------------------
+
+0.9.2 (2020-06-01)
+------------------
+
+0.9.1 (2020-05-26)
+------------------
+
+0.9.0 (2020-04-30)
+------------------
 
 0.8.2 (2019-11-19)
 ------------------

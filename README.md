@@ -1,3 +1,42 @@
+## examples (foxy) - 0.9.4-1
+
+The packages in the `examples` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy examples` on `Tue, 08 Dec 2020 18:49:04 -0000`
+
+These packages were released:
+- `examples_rclcpp_minimal_action_client`
+- `examples_rclcpp_minimal_action_server`
+- `examples_rclcpp_minimal_client`
+- `examples_rclcpp_minimal_composition`
+- `examples_rclcpp_minimal_publisher`
+- `examples_rclcpp_minimal_service`
+- `examples_rclcpp_minimal_subscriber`
+- `examples_rclcpp_minimal_timer`
+- `examples_rclcpp_multithreaded_executor`
+- `examples_rclpy_executors`
+- `examples_rclpy_minimal_action_client`
+- `examples_rclpy_minimal_action_server`
+- `examples_rclpy_minimal_client`
+- `examples_rclpy_minimal_publisher`
+- `examples_rclpy_minimal_service`
+- `examples_rclpy_minimal_subscriber`
+
+Version of package(s) in repository `examples`:
+
+- upstream repository: https://github.com/ros2/examples.git
+- release repository: https://github.com/ros2-gbp/examples-release.git
+- rosdistro version: `0.9.3-1`
+- old version: `0.9.3-1`
+- new version: `0.9.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.0`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## examples (eloquent) - 0.8.3-1
 
 The packages in the `examples` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --ros-distro eloquent examples` on `Fri, 04 Dec 2020 21:54:59 -0000`

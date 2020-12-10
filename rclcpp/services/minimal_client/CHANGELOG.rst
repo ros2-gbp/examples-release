@@ -2,13 +2,16 @@
 Changelog for package examples_rclcpp_minimal_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.9.4 (2020-12-08)
-------------------
-* Added common linters (`#265 <https://github.com/ros2/examples/issues/265>`_)
-* Contributors: Alejandro Hernández Cordero
+0.10.1 (2020-12-10)
+-------------------
+* Update maintainers (`#292 <https://github.com/ros2/examples/issues/292>`_)
+* Contributors: Shane Loretz
 
-0.9.3 (2020-06-23)
-------------------
+0.10.0 (2020-09-21)
+-------------------
+* Make sure to include what you use in all examples. (`#284 <https://github.com/ros2/examples/issues/284>`_)
+* Added common linters (`#265 <https://github.com/ros2/examples/issues/265>`_)
+* Contributors: Alejandro Hernández Cordero, Chris Lalancette
 
 0.9.2 (2020-06-01)
 ------------------

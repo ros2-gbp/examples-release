@@ -2,13 +2,18 @@
 Changelog for package examples_rclcpp_minimal_subscriber
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.9.4 (2020-12-08)
-------------------
-* Added common linters (`#265 <https://github.com/ros2/examples/issues/265>`_)
-* Contributors: Alejandro Hernández Cordero
+0.10.1 (2020-12-10)
+-------------------
+* Update maintainers (`#292 <https://github.com/ros2/examples/issues/292>`_)
+* Contributors: Shane Loretz
 
-0.9.3 (2020-06-23)
-------------------
+0.10.0 (2020-09-21)
+-------------------
+* Make sure to include what you use in all examples. (`#284 <https://github.com/ros2/examples/issues/284>`_)
+* Remove a TODO in the not_composable demo. (`#285 <https://github.com/ros2/examples/issues/285>`_)
+* Add Topic Statistics Example (`#281 <https://github.com/ros2/examples/issues/281>`_)
+* Added common linters (`#265 <https://github.com/ros2/examples/issues/265>`_)
+* Contributors: Alejandro Hernández Cordero, Chris Lalancette, Devin Bonnie
 
 0.9.2 (2020-06-01)
 ------------------

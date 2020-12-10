@@ -1,22 +1,19 @@
 from setuptools import setup
 
-package_name = 'examples_rclpy_minimal_service'
+package_name = 'examples_rclpy_guard_conditions'
 
 setup(
     name=package_name,
     version='0.10.1',
     packages=[package_name],
     data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
+        ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    author='Mikael Arguedas',
-    author_email='mikael@osrfoundation.org',
-    maintainer='Mikael Arguedas',
-    maintainer_email='mikael@osrfoundation.org',
+    maintainer='Audrow Nash',
+    maintainer_email='audrow@openrobotics.com',
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
@@ -24,14 +21,13 @@ setup(
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
-    description='Examples of minimal service servers using rclpy.',
+    description='Examples of using guard conditions.',
     license='Apache License, Version 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'service = examples_rclpy_minimal_service.service:main',
-            'service_member_function = '
-            ' examples_rclpy_minimal_service.service_member_function:main',
+            'trigger_guard_condition = '
+            'examples_rclpy_guard_conditions.trigger_guard_condition:main'
         ],
     },
 )

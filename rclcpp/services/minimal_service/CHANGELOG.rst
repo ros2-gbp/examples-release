@@ -2,6 +2,9 @@
 Changelog for package examples_rclcpp_minimal_service
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.10.2 (2021-01-25)
+-------------------
+
 0.10.1 (2020-12-10)
 -------------------
 * Update maintainers (`#292 <https://github.com/ros2/examples/issues/292>`_)

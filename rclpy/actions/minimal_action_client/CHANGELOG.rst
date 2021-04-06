@@ -2,6 +2,9 @@
 Changelog for package examples_rclpy_minimal_action_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.11.0 (2021-04-06)
+-------------------
+
 0.10.3 (2021-03-18)
 -------------------
 * Using asyncio with ros2 action client (`#301 <https://github.com/ros2/examples/issues/301>`_)

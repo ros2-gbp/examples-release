@@ -2,6 +2,9 @@
 Changelog for package examples_rclcpp_minimal_subscriber
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.11.1 (2021-04-12)
+-------------------
+
 0.11.0 (2021-04-06)
 -------------------
 * Unique network flows (`#296 <https://github.com/ros2/examples/issues/296>`_)

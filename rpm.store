@@ -1,1 +1,1 @@
-{"base": "34774167", "parent": "rpm/rolling/examples_rclpy_pointcloud_publisher", "previous": "c2d560c8", "trim": "", "trimbase": ""}
+{"base": "fdb74121", "parent": "rpm/galactic/examples_rclpy_pointcloud_publisher", "previous": "edb4a7c5", "trim": "", "trimbase": ""}

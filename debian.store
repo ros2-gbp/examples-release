@@ -1,1 +1,1 @@
-{"base": "e66b00c3", "parent": "debian/rolling/examples_rclpy_pointcloud_publisher", "previous": "1d816a46", "trim": "", "trimbase": ""}
+{"base": "debad0de", "parent": "debian/rolling/examples_rclpy_pointcloud_publisher", "previous": "58beaf4d", "trim": "", "trimbase": ""}

@@ -1,0 +1,12 @@
+Source: ros-galactic-examples-rclcpp-minimal-timer
+Section: misc
+Priority: optional
+Maintainer: Mabel Zhang <mabel@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-galactic-ament-cmake, ros-galactic-ament-lint-auto, ros-galactic-ament-lint-common, ros-galactic-rclcpp, ros-galactic-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-galactic-examples-rclcpp-minimal-timer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-rclcpp, ros-galactic-ros-workspace
+Description: Examples of minimal nodes which have timers

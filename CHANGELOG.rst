@@ -2,6 +2,9 @@
 Changelog for package examples_rclcpp_cbg_executor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.11.2 (2021-04-26)
+-------------------
+
 0.11.1 (2021-04-12)
 -------------------
 * Fix clang warnings about type mismatches. (`#309 <https://github.com/ros2/examples/issues/309>`_)

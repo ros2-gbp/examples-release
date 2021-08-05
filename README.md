@@ -1,3 +1,46 @@
+## examples (rolling) - 0.12.0-1
+
+The packages in the `examples` repository were released into the `rolling` distro by running `/home/osrf/.local/bin/bloom-release --rosdistro rolling -t rolling examples` on `Thu, 05 Aug 2021 17:02:09 -0000`
+
+These packages were released:
+- `examples_rclcpp_cbg_executor`
+- `examples_rclcpp_minimal_action_client`
+- `examples_rclcpp_minimal_action_server`
+- `examples_rclcpp_minimal_client`
+- `examples_rclcpp_minimal_composition`
+- `examples_rclcpp_minimal_publisher`
+- `examples_rclcpp_minimal_service`
+- `examples_rclcpp_minimal_subscriber`
+- `examples_rclcpp_minimal_timer`
+- `examples_rclcpp_multithreaded_executor`
+- `examples_rclcpp_wait_set`
+- `examples_rclpy_executors`
+- `examples_rclpy_guard_conditions`
+- `examples_rclpy_minimal_action_client`
+- `examples_rclpy_minimal_action_server`
+- `examples_rclpy_minimal_client`
+- `examples_rclpy_minimal_publisher`
+- `examples_rclpy_minimal_service`
+- `examples_rclpy_minimal_subscriber`
+- `examples_rclpy_pointcloud_publisher`
+
+Version of package(s) in repository `examples`:
+
+- upstream repository: https://github.com/ros2/examples.git
+- release repository: https://github.com/ros2-gbp/examples-release.git
+- rosdistro version: `0.11.2-1`
+- old version: `0.11.2-1`
+- new version: `0.12.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## examples (galactic) - 0.11.2-1
 
 The packages in the `examples` repository were released into the `galactic` distro by running `/usr/bin/bloom-release --rosdistro galactic --track galactic examples` on `Mon, 26 Apr 2021 21:32:03 -0000`

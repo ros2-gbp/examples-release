@@ -2,6 +2,9 @@
 Changelog for package examples_rclcpp_minimal_publisher
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.13.0 (2021-10-18)
+-------------------
+
 0.12.0 (2021-08-05)
 -------------------
 * Add try&catch statement to unique network flow publisher example (`#313 <https://github.com/ros2/examples/issues/313>`_)

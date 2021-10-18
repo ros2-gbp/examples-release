@@ -2,6 +2,11 @@
 Changelog for package examples_rclcpp_cbg_executor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.13.0 (2021-10-18)
+-------------------
+* Fix deprecated subscriber callbacks (`#323 <https://github.com/ros2/examples/issues/323>`_)
+* Contributors: Abrar Rahman Protyasha
+
 0.12.0 (2021-08-05)
 -------------------
 * Remove use of get_callback_groups(). (`#320 <https://github.com/ros2/examples/issues/320>`_)

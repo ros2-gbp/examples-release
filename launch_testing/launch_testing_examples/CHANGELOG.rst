@@ -2,15 +2,7 @@
 Changelog for package launch_testing_examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.16.2 (2022-11-02)
--------------------
-* Increase the WaitForNode timeout. (`#350 <https://github.com/ros2/examples/issues/350>`_)
-* Contributors: Chris Lalancette
-
-0.16.1 (2022-09-13)
--------------------
-
-0.16.0 (2022-04-29)
+0.15.1 (2022-11-07)
 -------------------
 
 0.15.0 (2022-03-01)

@@ -2,6 +2,9 @@
 Changelog for package examples_rclcpp_multithreaded_executor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.17.1 (2023-03-01)
+-------------------
+
 0.17.0 (2023-02-14)
 -------------------
 * Update the examples to C++17. (`#353 <https://github.com/ros2/examples/issues/353>`_)

@@ -1,0 +1,12 @@
+Source: ros-iron-examples-rclcpp-wait-set
+Section: misc
+Priority: optional
+Maintainer: Aditya Pande <aditya.pande@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ament-lint-auto <!nocheck>, ros-iron-ament-lint-common <!nocheck>, ros-iron-example-interfaces, ros-iron-rclcpp, ros-iron-rclcpp-components, ros-iron-std-msgs, ros-iron-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-iron-examples-rclcpp-wait-set
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-example-interfaces, ros-iron-rclcpp, ros-iron-rclcpp-components, ros-iron-std-msgs, ros-iron-ros-workspace
+Description: Example of how to use the rclcpp::WaitSet directly.

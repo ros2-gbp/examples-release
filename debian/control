@@ -1,0 +1,12 @@
+Source: ros-rolling-examples-rclcpp-cbg-executor
+Section: misc
+Priority: optional
+Maintainer: Aditya Pande <aditya.pande@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-rclcpp, ros-rolling-std-msgs, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-examples-rclcpp-cbg-executor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-rclcpp, ros-rolling-std-msgs, ros-rolling-ros-workspace
+Description: Example for multiple Executor instances in one process, using the callback-group-level interface of the Executor class.

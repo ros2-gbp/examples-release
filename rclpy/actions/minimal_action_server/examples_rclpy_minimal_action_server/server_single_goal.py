@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import sys
 import threading
 import time
 
@@ -20,6 +21,7 @@ from example_interfaces.action import Fibonacci
 import rclpy
 from rclpy.action import ActionServer, CancelResponse, GoalResponse
 from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import ExternalShutdownException
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
@@ -98,7 +100,12 @@ class MinimalActionServer(Node):
             # Sleep for demonstration purposes
             time.sleep(1)
 
-        goal_handle.succeed()
+        with self._goal_lock:
+            if not goal_handle.is_active:
+                self.get_logger().info('Goal aborted')
+                return Fibonacci.Result()
+
+            goal_handle.succeed()
 
         # Populate result message
         result = Fibonacci.Result()
@@ -112,14 +119,16 @@ class MinimalActionServer(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    action_server = MinimalActionServer()
+    try:
+        action_server = MinimalActionServer()
 
-    # We use a MultiThreadedExecutor to handle incoming goal requests concurrently
-    executor = MultiThreadedExecutor()
-    rclpy.spin(action_server, executor=executor)
-
-    action_server.destroy()
-    rclpy.shutdown()
+        # We use a MultiThreadedExecutor to handle incoming goal requests concurrently
+        executor = MultiThreadedExecutor()
+        rclpy.spin(action_server, executor=executor)
+    except KeyboardInterrupt:
+        pass
+    except ExternalShutdownException:
+        sys.exit(1)
 
 
 if __name__ == '__main__':

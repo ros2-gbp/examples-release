@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
 import time
 
 from example_interfaces.action import Fibonacci
@@ -20,7 +19,6 @@ from example_interfaces.action import Fibonacci
 import rclpy
 from rclpy.action import ActionServer, CancelResponse
 from rclpy.callback_groups import ReentrantCallbackGroup
-from rclpy.executors import ExternalShutdownException
 from rclpy.executors import MultiThreadedExecutor
 
 
@@ -73,30 +71,28 @@ def main(args=None):
     global logger
     rclpy.init(args=args)
 
-    try:
-        node = rclpy.create_node('minimal_action_server')
-        logger = node.get_logger()
+    node = rclpy.create_node('minimal_action_server')
+    logger = node.get_logger()
 
-        # Use a ReentrantCallbackGroup to enable processing multiple goals concurrently
-        # Default goal callback accepts all goals
-        # Default cancel callback rejects cancel requests
-        action_server = ActionServer(
-            node,
-            Fibonacci,
-            'fibonacci',
-            execute_callback=execute_callback,
-            cancel_callback=cancel_callback,
-            callback_group=ReentrantCallbackGroup())
-        action_server  # Quiet flake8 warnings about unused variable
+    # Use a ReentrantCallbackGroup to enable processing multiple goals concurrently
+    # Default goal callback accepts all goals
+    # Default cancel callback rejects cancel requests
+    action_server = ActionServer(
+        node,
+        Fibonacci,
+        'fibonacci',
+        execute_callback=execute_callback,
+        cancel_callback=cancel_callback,
+        callback_group=ReentrantCallbackGroup())
 
-        # Use a MultiThreadedExecutor to enable processing goals concurrently
-        executor = MultiThreadedExecutor()
+    # Use a MultiThreadedExecutor to enable processing goals concurrently
+    executor = MultiThreadedExecutor()
 
-        rclpy.spin(node, executor=executor)
-    except KeyboardInterrupt:
-        pass
-    except ExternalShutdownException:
-        sys.exit(1)
+    rclpy.spin(node, executor=executor)
+
+    action_server.destroy()
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

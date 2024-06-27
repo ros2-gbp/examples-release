@@ -12,11 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
 from time import sleep
 
 import rclpy
-from rclpy.executors import ExternalShutdownException
 
 from std_msgs.msg import String
 
@@ -29,24 +27,25 @@ from std_msgs.msg import String
 def main(args=None):
     rclpy.init(args=args)
 
-    try:
-        node = rclpy.create_node('minimal_publisher')
+    node = rclpy.create_node('minimal_publisher')
 
-        publisher = node.create_publisher(String, 'topic', 10)
+    publisher = node.create_publisher(String, 'topic', 10)
 
-        msg = String()
+    msg = String()
 
-        i = 0
-        while rclpy.ok():
-            msg.data = 'Hello World: %d' % i
-            i += 1
-            node.get_logger().info('Publishing: "%s"' % msg.data)
-            publisher.publish(msg)
-            sleep(0.5)  # seconds
-    except KeyboardInterrupt:
-        pass
-    except ExternalShutdownException:
-        sys.exit(1)
+    i = 0
+    while rclpy.ok():
+        msg.data = 'Hello World: %d' % i
+        i += 1
+        node.get_logger().info('Publishing: "%s"' % msg.data)
+        publisher.publish(msg)
+        sleep(0.5)  # seconds
+
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

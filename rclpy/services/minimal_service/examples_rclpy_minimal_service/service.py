@@ -12,12 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
-
 from example_interfaces.srv import AddTwoInts
 
 import rclpy
-from rclpy.executors import ExternalShutdownException
 
 g_node = None
 
@@ -35,18 +32,17 @@ def main(args=None):
     global g_node
     rclpy.init(args=args)
 
-    try:
-        g_node = rclpy.create_node('minimal_service')
+    g_node = rclpy.create_node('minimal_service')
 
-        srv = g_node.create_service(AddTwoInts, 'add_two_ints', add_two_ints_callback)
-        srv  # Quiet flake8 warnings about unused variable
-        while rclpy.ok():
-            rclpy.spin_once(g_node)
+    srv = g_node.create_service(AddTwoInts, 'add_two_ints', add_two_ints_callback)
+    while rclpy.ok():
+        rclpy.spin_once(g_node)
 
-    except KeyboardInterrupt:
-        pass
-    except ExternalShutdownException:
-        sys.exit(1)
+    # Destroy the service attached to the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    g_node.destroy_service(srv)
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

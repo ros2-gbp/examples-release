@@ -12,12 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
-
 from example_interfaces.srv import AddTwoInts
 
 import rclpy
-from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 
 
@@ -37,14 +34,11 @@ class MinimalService(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    try:
-        minimal_service = MinimalService()
+    minimal_service = MinimalService()
 
-        rclpy.spin(minimal_service)
-    except KeyboardInterrupt:
-        pass
-    except ExternalShutdownException:
-        sys.exit(1)
+    rclpy.spin(minimal_service)
+
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

@@ -12,10 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
-
 import rclpy
-from rclpy.executors import ExternalShutdownException
 
 from std_msgs.msg import String
 
@@ -32,18 +29,19 @@ def main(args=None):
     global g_node
     rclpy.init(args=args)
 
-    try:
-        g_node = rclpy.create_node('minimal_subscriber')
+    g_node = rclpy.create_node('minimal_subscriber')
 
-        subscription = g_node.create_subscription(String, 'topic', chatter_callback, 10)
-        subscription  # prevent unused variable warning
+    subscription = g_node.create_subscription(String, 'topic', chatter_callback, 10)
+    subscription  # prevent unused variable warning
 
-        while rclpy.ok():
-            rclpy.spin_once(g_node)
-    except KeyboardInterrupt:
-        pass
-    except ExternalShutdownException:
-        sys.exit(1)
+    while rclpy.ok():
+        rclpy.spin_once(g_node)
+
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    g_node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

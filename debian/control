@@ -1,0 +1,12 @@
+Source: ros-iron-examples-rclcpp-minimal-composition
+Section: misc
+Priority: optional
+Maintainer: Aditya Pande <aditya.pande@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ament-lint-auto <!nocheck>, ros-iron-ament-lint-common <!nocheck>, ros-iron-rclcpp, ros-iron-rclcpp-components, ros-iron-std-msgs, ros-iron-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-iron-examples-rclcpp-minimal-composition
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-rclcpp, ros-iron-rclcpp-components, ros-iron-std-msgs, ros-iron-ros-workspace
+Description: Minimalist examples of composing nodes in the same process

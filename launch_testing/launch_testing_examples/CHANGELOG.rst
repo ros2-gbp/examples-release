@@ -2,22 +2,7 @@
 Changelog for package launch_testing_examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.19.4 (2024-06-27)
--------------------
-
-0.19.3 (2024-04-16)
--------------------
-
-0.19.2 (2024-03-28)
--------------------
-* Cleanup the launch_testing_examples. (`#374 <https://github.com/ros2/examples/issues/374>`_)
-* Refactor WaitForNodes class. (`#373 <https://github.com/ros2/examples/issues/373>`_)
-* Contributors: Chris Lalancette
-
-0.19.1 (2023-07-11)
--------------------
-
-0.19.0 (2023-04-27)
+0.18.1 (2024-07-10)
 -------------------
 
 0.18.0 (2023-04-11)

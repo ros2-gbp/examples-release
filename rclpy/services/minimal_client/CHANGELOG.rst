@@ -2,6 +2,11 @@
 Changelog for package examples_rclpy_minimal_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.2 (2024-07-29)
+-------------------
+* Switch to using the rclpy context manager everywhere. (`#389 <https://github.com/ros2/examples/issues/389>`_)
+* Contributors: Chris Lalancette
+
 0.20.1 (2024-06-17)
 -------------------
 * Use a single executor instance for spinning in client_async_callback. (`#382 <https://github.com/ros2/examples/issues/382>`_)

@@ -2,30 +2,10 @@
 Changelog for package examples_rclpy_minimal_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.2 (2024-07-29)
--------------------
-* Switch to using the rclpy context manager everywhere. (`#389 <https://github.com/ros2/examples/issues/389>`_)
-* Contributors: Chris Lalancette
-
-0.20.1 (2024-06-17)
--------------------
-* Use a single executor instance for spinning in client_async_callback. (`#382 <https://github.com/ros2/examples/issues/382>`_)
-* Update the shutdown handling in all of the Python examples. (`#379 <https://github.com/ros2/examples/issues/379>`_)
-* Contributors: Chris Lalancette
-
-0.20.0 (2024-04-26)
+0.18.2 (2024-11-08)
 -------------------
 
-0.19.3 (2024-04-16)
--------------------
-
-0.19.2 (2024-03-28)
--------------------
-
-0.19.1 (2023-07-11)
--------------------
-
-0.19.0 (2023-04-27)
+0.18.1 (2024-07-10)
 -------------------
 
 0.18.0 (2023-04-11)

@@ -19,7 +19,6 @@ from example_interfaces.action import Fibonacci
 
 import rclpy
 from rclpy.action import ActionClient
-from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 
 
@@ -70,49 +69,48 @@ async def spinning(node):
 
 async def run(args, loop):
 
-    # init ROS 2
-    with rclpy.init(args=args):
-        logger = rclpy.logging.get_logger('minimal_action_client')
+    logger = rclpy.logging.get_logger('minimal_action_client')
 
-        # create node
-        action_client = MinimalActionClientAsyncIO()
+    # init ros2
+    rclpy.init(args=args)
 
-        # start spinning
-        spin_task = loop.create_task(spinning(action_client))
+    # create node
+    action_client = MinimalActionClientAsyncIO()
 
-        # Parallel example
-        # execute goal request and schedule in loop
-        my_task1 = loop.create_task(action_client.send_goal())
-        my_task2 = loop.create_task(action_client.send_goal())
+    # start spinning
+    spin_task = loop.create_task(spinning(action_client))
 
-        # glue futures together and wait
-        wait_future = asyncio.wait([my_task1, my_task2])
-        # run event loop
-        finished, unfinished = await wait_future
-        logger.info(f'unfinished: {len(unfinished)}')
-        for task in finished:
-            logger.info('result {} and status flag {}'.format(*task.result()))
+    # Parallel example
+    # execute goal request and schedule in loop
+    my_task1 = loop.create_task(action_client.send_goal())
+    my_task2 = loop.create_task(action_client.send_goal())
 
-        # Sequence
-        result, status = await loop.create_task(action_client.send_goal())
-        logger.info(f'A) result {result} and status flag {status}')
-        result, status = await loop.create_task(action_client.send_goal())
-        logger.info(f'B) result {result} and status flag {status}')
+    # glue futures together and wait
+    wait_future = asyncio.wait([my_task1, my_task2])
+    # run event loop
+    finished, unfinished = await wait_future
+    logger.info(f'unfinished: {len(unfinished)}')
+    for task in finished:
+        logger.info('result {} and status flag {}'.format(*task.result()))
 
-        # cancel spinning task
-        spin_task.cancel()
-        try:
-            await spin_task
-        except asyncio.exceptions.CancelledError:
-            pass
+    # Sequence
+    result, status = await loop.create_task(action_client.send_goal())
+    logger.info(f'A) result {result} and status flag {status}')
+    result, status = await loop.create_task(action_client.send_goal())
+    logger.info(f'B) result {result} and status flag {status}')
+
+    # cancel spinning task
+    spin_task.cancel()
+    try:
+        await spin_task
+    except asyncio.exceptions.CancelledError:
+        pass
+    rclpy.shutdown()
 
 
 def main(args=None):
-    try:
-        loop = asyncio.get_event_loop()
-        loop.run_until_complete(run(args, loop=loop))
-    except (KeyboardInterrupt, ExternalShutdownException):
-        pass
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(run(args, loop=loop))
 
 
 if __name__ == '__main__':

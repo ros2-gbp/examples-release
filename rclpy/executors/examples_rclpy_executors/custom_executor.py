@@ -14,11 +14,13 @@
 
 from concurrent.futures import ThreadPoolExecutor
 import os
+import sys
 
 from examples_rclpy_executors.listener import Listener
 from examples_rclpy_executors.talker import Talker
 import rclpy
 from rclpy.executors import Executor
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from std_msgs.msg import String
 
@@ -78,25 +80,21 @@ class PriorityExecutor(Executor):
 
 
 def main(args=None):
-    rclpy.init(args=args)
     try:
-        listener = Listener()
-        talker = Talker()
-        estopper = Estopper()
+        with rclpy.init(args=args):
+            listener = Listener()
+            talker = Talker()
+            estopper = Estopper()
 
-        executor = PriorityExecutor()
-        executor.add_high_priority_node(estopper)
-        executor.add_node(listener)
-        executor.add_node(talker)
-        try:
+            executor = PriorityExecutor()
+            executor.add_high_priority_node(estopper)
+            executor.add_node(listener)
+            executor.add_node(talker)
             executor.spin()
-        finally:
-            executor.shutdown()
-            estopper.destroy_node()
-            talker.destroy_node()
-            listener.destroy_node()
-    finally:
-        rclpy.shutdown()
+    except KeyboardInterrupt:
+        pass
+    except ExternalShutdownException:
+        sys.exit(1)
 
 
 if __name__ == '__main__':

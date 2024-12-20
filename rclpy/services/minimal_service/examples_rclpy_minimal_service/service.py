@@ -15,6 +15,7 @@
 from example_interfaces.srv import AddTwoInts
 
 import rclpy
+from rclpy.executors import ExternalShutdownException
 
 g_node = None
 
@@ -30,19 +31,17 @@ def add_two_ints_callback(request, response):
 
 def main(args=None):
     global g_node
-    rclpy.init(args=args)
 
-    g_node = rclpy.create_node('minimal_service')
+    try:
+        with rclpy.init(args=args):
+            g_node = rclpy.create_node('minimal_service')
 
-    srv = g_node.create_service(AddTwoInts, 'add_two_ints', add_two_ints_callback)
-    while rclpy.ok():
-        rclpy.spin_once(g_node)
-
-    # Destroy the service attached to the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
-    g_node.destroy_service(srv)
-    rclpy.shutdown()
+            srv = g_node.create_service(AddTwoInts, 'add_two_ints', add_two_ints_callback)
+            srv  # Quiet flake8 warnings about unused variable
+            while rclpy.ok():
+                rclpy.spin_once(g_node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
 
 
 if __name__ == '__main__':

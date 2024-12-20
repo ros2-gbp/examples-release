@@ -2,6 +2,9 @@
 Changelog for package examples_rclpy_pointcloud_publisher
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.4 (2024-12-20)
+-------------------
+
 0.20.3 (2024-11-20)
 -------------------
 * Add in ament_xmllint for the ament_python packages. (`#397 <https://github.com/ros2/examples/issues/397>`_)

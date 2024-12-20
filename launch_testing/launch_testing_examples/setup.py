@@ -4,7 +4,7 @@ package_name = 'launch_testing_examples'
 
 setup(
     name=package_name,
-    version='0.20.3',
+    version='0.20.4',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -18,8 +18,4 @@ setup(
     description='Examples of simple launch tests',
     license='Apache License 2.0',
     tests_require=['pytest'],
-    entry_points={
-        'console_scripts': [
-        ],
-    },
 )

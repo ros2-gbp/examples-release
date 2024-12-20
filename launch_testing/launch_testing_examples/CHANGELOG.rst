@@ -2,6 +2,11 @@
 Changelog for package launch_testing_examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.20.4 (2024-12-20)
+-------------------
+* Add test_xmllint.py. (`#401 <https://github.com/ros2/examples/issues/401>`_)
+* Contributors: Chris Lalancette
+
 0.20.3 (2024-11-20)
 -------------------
 

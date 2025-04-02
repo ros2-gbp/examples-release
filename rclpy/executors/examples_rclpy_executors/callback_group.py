@@ -15,7 +15,6 @@
 from examples_rclpy_executors.listener import Listener
 import rclpy
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
-from rclpy.executors import ExternalShutdownException
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 from std_msgs.msg import String
@@ -45,23 +44,28 @@ class DoubleTalker(Node):
 
 
 def main(args=None):
+    rclpy.init(args=args)
     try:
-        with rclpy.init(args=args):
-            talker = DoubleTalker()
-            listener = Listener()
-            # MultiThreadedExecutor executes callbacks with a thread pool. If num_threads is not
-            # specified then num_threads will be multiprocessing.cpu_count() if it is implemented.
-            # Otherwise it will use a single thread. This executor will allow callbacks to happen
-            # in parallel, however the MutuallyExclusiveCallbackGroup in DoubleTalker will only
-            # allow its callbacks to be executed one at a time. The callbacks in Listener are free
-            # to execute in parallel to the ones in DoubleTalker however.
-            executor = MultiThreadedExecutor(num_threads=4)
-            executor.add_node(talker)
-            executor.add_node(listener)
+        talker = DoubleTalker()
+        listener = Listener()
+        # MultiThreadedExecutor executes callbacks with a thread pool. If num_threads is not
+        # specified then num_threads will be multiprocessing.cpu_count() if it is implemented.
+        # Otherwise it will use a single thread. This executor will allow callbacks to happen in
+        # parallel, however the MutuallyExclusiveCallbackGroup in DoubleTalker will only allow its
+        # callbacks to be executed one at a time. The callbacks in Listener are free to execute in
+        # parallel to the ones in DoubleTalker however.
+        executor = MultiThreadedExecutor(num_threads=4)
+        executor.add_node(talker)
+        executor.add_node(listener)
 
+        try:
             executor.spin()
-    except (KeyboardInterrupt, ExternalShutdownException):
-        pass
+        finally:
+            executor.shutdown()
+            listener.destroy_node()
+            talker.destroy_node()
+    finally:
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':

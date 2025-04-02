@@ -2,25 +2,10 @@
 Changelog for package examples_rclpy_minimal_service
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.4 (2024-12-20)
+0.19.5 (2025-04-02)
 -------------------
 
-0.20.3 (2024-11-20)
--------------------
-* Add in ament_xmllint for the ament_python packages. (`#397 <https://github.com/ros2/examples/issues/397>`_)
-* Contributors: Chris Lalancette
-
-0.20.2 (2024-07-29)
--------------------
-* Switch to using the rclpy context manager everywhere. (`#389 <https://github.com/ros2/examples/issues/389>`_)
-* Contributors: Chris Lalancette
-
-0.20.1 (2024-06-17)
--------------------
-* Update the shutdown handling in all of the Python examples. (`#379 <https://github.com/ros2/examples/issues/379>`_)
-* Contributors: Chris Lalancette
-
-0.20.0 (2024-04-26)
+0.19.4 (2024-06-27)
 -------------------
 
 0.19.3 (2024-04-16)

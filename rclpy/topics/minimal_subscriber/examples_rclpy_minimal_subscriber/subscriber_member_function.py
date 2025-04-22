@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import rclpy
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 
 from std_msgs.msg import String
@@ -34,17 +35,13 @@ class MinimalSubscriber(Node):
 
 
 def main(args=None):
-    rclpy.init(args=args)
+    try:
+        with rclpy.init(args=args):
+            minimal_subscriber = MinimalSubscriber()
 
-    minimal_subscriber = MinimalSubscriber()
-
-    rclpy.spin(minimal_subscriber)
-
-    # Destroy the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
-    minimal_subscriber.destroy_node()
-    rclpy.shutdown()
+            rclpy.spin(minimal_subscriber)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
 
 
 if __name__ == '__main__':

@@ -1,1 +1,1 @@
-{"base": "52ba94d3dced", "parent": "debian/rolling/examples_rclcpp_minimal_subscriber", "previous": "0c773e526f6f", "trim": "", "trimbase": ""}
+{"base": "408540336", "parent": "debian/rolling/examples_rclcpp_minimal_subscriber", "previous": "bab151ed4", "trim": "", "trimbase": ""}

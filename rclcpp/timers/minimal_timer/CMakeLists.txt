@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(examples_rclcpp_minimal_timer)
 
-# Default to C++17
+# Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 17)
-  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+  set(CMAKE_CXX_STANDARD 14)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -15,10 +14,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
 add_executable(timer_lambda lambda.cpp)
-target_link_libraries(timer_lambda PRIVATE rclcpp::rclcpp)
+ament_target_dependencies(timer_lambda rclcpp)
 
 add_executable(timer_member_function member_function.cpp)
-target_link_libraries(timer_member_function PRIVATE rclcpp::rclcpp)
+ament_target_dependencies(timer_member_function rclcpp)
 
 install(TARGETS
   timer_lambda

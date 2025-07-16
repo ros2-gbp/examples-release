@@ -15,7 +15,6 @@
 from example_interfaces.srv import AddTwoInts
 
 import rclpy
-from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 
 
@@ -33,13 +32,13 @@ class MinimalService(Node):
 
 
 def main(args=None):
-    try:
-        with rclpy.init(args=args):
-            minimal_service = MinimalService()
+    rclpy.init(args=args)
 
-            rclpy.spin(minimal_service)
-    except (KeyboardInterrupt, ExternalShutdownException):
-        pass
+    minimal_service = MinimalService()
+
+    rclpy.spin(minimal_service)
+
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

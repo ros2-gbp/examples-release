@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(examples_rclcpp_minimal_subscriber)
 
-# Default to C++17
+# Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 17)
-  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+  set(CMAKE_CXX_STANDARD 14)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -17,31 +16,31 @@ find_package(rclcpp_components REQUIRED)
 find_package(std_msgs REQUIRED)
 
 add_executable(subscriber_lambda lambda.cpp)
-target_link_libraries(subscriber_lambda PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(subscriber_lambda rclcpp std_msgs)
 
 add_executable(subscriber_member_function member_function.cpp)
-target_link_libraries(subscriber_member_function PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(subscriber_member_function rclcpp std_msgs)
 
 add_executable(subscriber_member_function_with_topic_statistics member_function_with_topic_statistics.cpp)
-target_link_libraries(subscriber_member_function_with_topic_statistics PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(subscriber_member_function_with_topic_statistics rclcpp std_msgs)
 
 add_executable(subscriber_member_function_with_type_adapter member_function_with_type_adapter.cpp)
-target_link_libraries(subscriber_member_function_with_type_adapter PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(subscriber_member_function_with_type_adapter rclcpp std_msgs)
 
 add_executable(subscriber_member_function_with_unique_network_flow_endpoints member_function_with_unique_network_flow_endpoints.cpp)
-target_link_libraries(subscriber_member_function_with_unique_network_flow_endpoints PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(subscriber_member_function_with_unique_network_flow_endpoints rclcpp std_msgs)
 
 add_executable(subscriber_not_composable not_composable.cpp)
-target_link_libraries(subscriber_not_composable PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(subscriber_not_composable rclcpp std_msgs)
 
 add_executable(subscriber_content_filtering content_filtering.cpp)
-target_link_libraries(subscriber_content_filtering PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(subscriber_content_filtering rclcpp std_msgs)
 
 add_library(wait_set_subscriber_library SHARED
     wait_set_subscriber.cpp
     static_wait_set_subscriber.cpp
     time_triggered_wait_set_subscriber.cpp)
-target_link_libraries(wait_set_subscriber_library PRIVATE rclcpp::rclcpp rclcpp_components::component ${std_msgs_TARGETS})
+ament_target_dependencies(wait_set_subscriber_library rclcpp rclcpp_components std_msgs)
 
 rclcpp_components_register_node(wait_set_subscriber_library
     PLUGIN "WaitSetSubscriber"

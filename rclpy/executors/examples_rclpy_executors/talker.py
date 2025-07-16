@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import sys
+
 import rclpy
 from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
@@ -56,12 +58,17 @@ def main(args=None):
     :param args: Arguments passed in from the command line.
     """
     # Run standalone
+    rclpy.init(args=args)
     try:
-        with rclpy.init(args=args):
-            talker = Talker()
-            rclpy.spin(talker)
-    except (KeyboardInterrupt, ExternalShutdownException):
+        talker = Talker()
+        rclpy.spin(talker)
+    except KeyboardInterrupt:
         pass
+    except ExternalShutdownException:
+        sys.exit(1)
+    finally:
+        rclpy.try_shutdown()
+        talker.destroy_node()
 
 
 if __name__ == '__main__':

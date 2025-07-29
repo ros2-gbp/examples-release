@@ -1,9 +1,10 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 project(examples_rclcpp_minimal_action_server)
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -16,16 +17,16 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
 
 add_executable(action_server_member_functions member_functions.cpp)
-ament_target_dependencies(action_server_member_functions
-  "rclcpp"
-  "rclcpp_action"
-  "example_interfaces")
+target_link_libraries(action_server_member_functions PRIVATE
+  ${example_interfaces_TARGETS}
+  rclcpp::rclcpp
+  rclcpp_action::rclcpp_action)
 
 add_executable(action_server_not_composable not_composable.cpp)
-ament_target_dependencies(action_server_not_composable
-  "rclcpp"
-  "rclcpp_action"
-  "example_interfaces")
+target_link_libraries(action_server_not_composable PRIVATE
+  ${example_interfaces_TARGETS}
+  rclcpp::rclcpp
+  rclcpp_action::rclcpp_action)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

@@ -17,6 +17,7 @@ from example_interfaces.action import Fibonacci
 
 import rclpy
 from rclpy.action import ActionClient
+from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 
 
@@ -68,13 +69,15 @@ class MinimalActionClient(Node):
 
 
 def main(args=None):
-    rclpy.init(args=args)
+    try:
+        with rclpy.init(args=args):
+            action_client = MinimalActionClient()
 
-    action_client = MinimalActionClient()
+            action_client.send_goal()
 
-    action_client.send_goal()
-
-    rclpy.spin(action_client)
+            rclpy.spin(action_client)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
 
 
 if __name__ == '__main__':

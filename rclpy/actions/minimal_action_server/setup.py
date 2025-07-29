@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_minimal_action_server'
 
 setup(
     name=package_name,
-    version='0.15.4',
+    version='0.21.2',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -15,18 +15,21 @@ setup(
     zip_safe=True,
     author='Jacob Perron',
     author_email='jacob@openrobotics.org',
-    maintainer='Aditya Pande, Shane Loretz',
-    maintainer_email='aditya.pande@openrobotics.org, shane@openrobotics.org',
+    maintainer='Aditya Pande, Alejandro Hernandez Cordero',
+    maintainer_email='aditya.pande@openrobotics.org, alejandro@openrobotics.org',
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
     description='Examples of action servers using rclpy.',
     license='Apache License, Version 2.0',
-    tests_require=['pytest'],
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
     entry_points={
         'console_scripts': [
             'server = ' + package_name + '.server:main',

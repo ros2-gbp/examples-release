@@ -19,7 +19,6 @@ from example_interfaces.action import Fibonacci
 import rclpy
 from rclpy.action import ActionServer, CancelResponse, GoalResponse
 from rclpy.callback_groups import ReentrantCallbackGroup
-from rclpy.executors import ExternalShutdownException
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
@@ -91,16 +90,17 @@ class MinimalActionServer(Node):
 
 
 def main(args=None):
-    try:
-        with rclpy.init(args=args):
-            minimal_action_server = MinimalActionServer()
+    rclpy.init(args=args)
 
-            # Use a MultiThreadedExecutor to enable processing goals concurrently
-            executor = MultiThreadedExecutor()
+    minimal_action_server = MinimalActionServer()
 
-            rclpy.spin(minimal_action_server, executor=executor)
-    except (KeyboardInterrupt, ExternalShutdownException):
-        pass
+    # Use a MultiThreadedExecutor to enable processing goals concurrently
+    executor = MultiThreadedExecutor()
+
+    rclpy.spin(minimal_action_server, executor=executor)
+
+    minimal_action_server.destroy()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

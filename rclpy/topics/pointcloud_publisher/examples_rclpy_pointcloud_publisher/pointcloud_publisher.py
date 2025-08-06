@@ -15,7 +15,6 @@
 import numpy as np
 
 import rclpy
-from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 from sensor_msgs.msg import PointCloud2
 from sensor_msgs.msg import PointField
@@ -60,12 +59,11 @@ class PointCloudPublisher(Node):
 
 
 def main(args=None):
-    try:
-        with rclpy.init(args=args):
-            pc_publisher = PointCloudPublisher()
-            rclpy.spin(pc_publisher)
-    except (KeyboardInterrupt, ExternalShutdownException):
-        pass
+    rclpy.init(args=args)
+    pc_publisher = PointCloudPublisher()
+    rclpy.spin(pc_publisher)
+    pc_publisher.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

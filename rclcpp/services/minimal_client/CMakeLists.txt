@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.5)
 project(examples_rclcpp_minimal_client)
 
 # Default to C++17
@@ -16,7 +16,7 @@ find_package(example_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 
 add_executable(client_main main.cpp)
-target_link_libraries(client_main PRIVATE rclcpp::rclcpp ${example_interfaces_TARGETS})
+ament_target_dependencies(client_main rclcpp example_interfaces)
 
 install(TARGETS client_main
   DESTINATION lib/${PROJECT_NAME})

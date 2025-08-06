@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_executors'
 
 setup(
     name=package_name,
-    version='0.21.2',
+    version='0.19.6',
     packages=['examples_rclpy_executors'],
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
@@ -19,16 +19,13 @@ setup(
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
     description='Examples of creating and using exectors to run multiple nodes in rclpy.',
     license='Apache License, Version 2.0',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'listener = examples_rclpy_executors.listener:main',

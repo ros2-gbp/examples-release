@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.5)
 project(examples_rclcpp_minimal_publisher)
 
 # Default to C++17
@@ -16,22 +16,22 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
 add_executable(publisher_lambda lambda.cpp)
-target_link_libraries(publisher_lambda PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(publisher_lambda rclcpp std_msgs)
 
 add_executable(publisher_member_function member_function.cpp)
-target_link_libraries(publisher_member_function PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(publisher_member_function rclcpp std_msgs)
 
 add_executable(publisher_member_function_with_type_adapter member_function_with_type_adapter.cpp)
-target_link_libraries(publisher_member_function_with_type_adapter PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(publisher_member_function_with_type_adapter rclcpp std_msgs)
 
 add_executable(publisher_member_function_with_unique_network_flow_endpoints member_function_with_unique_network_flow_endpoints.cpp)
-target_link_libraries(publisher_member_function_with_unique_network_flow_endpoints PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(publisher_member_function_with_unique_network_flow_endpoints rclcpp std_msgs)
 
 add_executable(publisher_wait_for_all_acked member_function_with_wait_for_all_acked.cpp)
-target_link_libraries(publisher_wait_for_all_acked PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(publisher_wait_for_all_acked rclcpp std_msgs)
 
 add_executable(publisher_not_composable not_composable.cpp)
-target_link_libraries(publisher_not_composable PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(publisher_not_composable rclcpp std_msgs)
 
 install(TARGETS
   publisher_lambda

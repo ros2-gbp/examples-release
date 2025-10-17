@@ -1,3 +1,48 @@
+## examples (kilted) - 0.20.6-2
+
+The packages in the `examples` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --rosdistro kilted --track kilted examples` on `Fri, 17 Oct 2025 09:48:31 -0000`
+
+These packages were released:
+- `examples_rclcpp_async_client`
+- `examples_rclcpp_cbg_executor`
+- `examples_rclcpp_minimal_action_client`
+- `examples_rclcpp_minimal_action_server`
+- `examples_rclcpp_minimal_client`
+- `examples_rclcpp_minimal_composition`
+- `examples_rclcpp_minimal_publisher`
+- `examples_rclcpp_minimal_service`
+- `examples_rclcpp_minimal_subscriber`
+- `examples_rclcpp_minimal_timer`
+- `examples_rclcpp_multithreaded_executor`
+- `examples_rclcpp_wait_set`
+- `examples_rclpy_executors`
+- `examples_rclpy_guard_conditions`
+- `examples_rclpy_minimal_action_client`
+- `examples_rclpy_minimal_action_server`
+- `examples_rclpy_minimal_client`
+- `examples_rclpy_minimal_publisher`
+- `examples_rclpy_minimal_service`
+- `examples_rclpy_minimal_subscriber`
+- `examples_rclpy_pointcloud_publisher`
+- `launch_testing_examples`
+
+Version of package(s) in repository `examples`:
+
+- upstream repository: https://github.com/ros2/examples.git
+- release repository: https://github.com/ros2-gbp/examples-release.git
+- rosdistro version: `0.20.5-1`
+- old version: `0.20.6-1`
+- new version: `0.20.6-2`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## examples (kilted) - 0.20.6-1
 
 The packages in the `examples` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --rosdistro kilted --track kilted examples` on `Fri, 17 Oct 2025 09:41:11 -0000`

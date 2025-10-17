@@ -21,7 +21,6 @@
 
 #include "example_interfaces/action/fibonacci.hpp"
 #include "rclcpp/rclcpp.hpp"
-// TODO(jacobperron): Remove this once it is included as part of 'rclcpp.hpp'
 #include "rclcpp_action/rclcpp_action.hpp"
 
 class MinimalActionClient : public rclcpp::Node
@@ -135,9 +134,11 @@ int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
   auto action_client = std::make_shared<MinimalActionClient>();
+  rclcpp::executors::SingleThreadedExecutor executor;
+  executor.add_node(action_client);
 
   while (!action_client->is_goal_done()) {
-    rclcpp::spin_some(action_client);
+    executor.spin_some();
   }
 
   rclcpp::shutdown();

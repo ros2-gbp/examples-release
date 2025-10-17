@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_minimal_client'
 
 setup(
     name=package_name,
-    version='0.19.6',
+    version='0.19.7',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -20,13 +20,16 @@ setup(
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
     description='Examples of minimal service clients using rclpy.',
     license='Apache License, Version 2.0',
-    tests_require=['pytest'],
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
     entry_points={
         'console_scripts': [
             'client = examples_rclpy_minimal_client.client:main',

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.5)
 project(examples_rclcpp_wait_set)
 
 # Default to C++17
@@ -21,7 +21,7 @@ include_directories(include)
 
 add_library(talker SHARED src/talker.cpp)
 target_compile_definitions(talker PRIVATE WAIT_SET_DLL)
-target_link_libraries(talker PUBLIC rclcpp::rclcpp rclcpp_components::component ${std_msgs_TARGETS})
+ament_target_dependencies(talker rclcpp rclcpp_components std_msgs)
 rclcpp_components_register_node(
     talker
     PLUGIN "Talker"
@@ -29,35 +29,36 @@ rclcpp_components_register_node(
 
 add_library(listener SHARED src/listener.cpp)
 target_compile_definitions(listener PRIVATE WAIT_SET_DLL)
-target_link_libraries(listener PUBLIC rclcpp::rclcpp rclcpp_components::component ${std_msgs_TARGETS})
+ament_target_dependencies(listener rclcpp rclcpp_components std_msgs)
 rclcpp_components_register_node(
     listener
     PLUGIN "Listener"
     EXECUTABLE wait_set_listener)
 
 add_executable(wait_set src/wait_set.cpp)
-target_link_libraries(wait_set PRIVATE ${example_interfaces_TARGETS} rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(wait_set example_interfaces rclcpp std_msgs)
 
 add_executable(static_wait_set src/static_wait_set.cpp)
-target_link_libraries(static_wait_set PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(static_wait_set rclcpp std_msgs)
 
 add_executable(thread_safe_wait_set src/thread_safe_wait_set.cpp)
-target_link_libraries(thread_safe_wait_set PRIVATE ${example_interfaces_TARGETS} rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(thread_safe_wait_set example_interfaces rclcpp std_msgs)
 
 add_executable(wait_set_topics_and_timer src/wait_set_topics_and_timer.cpp)
-target_link_libraries(wait_set_topics_and_timer PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(wait_set_topics_and_timer rclcpp std_msgs)
 
 add_executable(wait_set_random_order src/wait_set_random_order.cpp)
-target_link_libraries(wait_set_random_order PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(wait_set_random_order rclcpp std_msgs)
 
 add_executable(executor_random_order src/executor_random_order.cpp)
-target_link_libraries(executor_random_order PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(executor_random_order rclcpp std_msgs)
 
 add_executable(wait_set_topics_with_different_rates src/wait_set_topics_with_different_rates.cpp)
-target_link_libraries(wait_set_topics_with_different_rates PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(wait_set_topics_with_different_rates rclcpp std_msgs)
 
 add_executable(wait_set_composed src/wait_set_composed.cpp)
-target_link_libraries(wait_set_composed PRIVATE talker listener rclcpp::rclcpp)
+target_link_libraries(wait_set_composed talker listener)
+ament_target_dependencies(wait_set_composed rclcpp)
 
 install(TARGETS
     talker

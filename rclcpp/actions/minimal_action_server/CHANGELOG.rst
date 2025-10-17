@@ -2,31 +2,16 @@
 Changelog for package examples_rclcpp_minimal_action_server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.6 (2025-10-17)
--------------------
-* Fix CMAKE deprecation (`#419 <https://github.com/ros2/examples//issues/419>`_) (`#420 <https://github.com/ros2/examples//issues/420>`_)
-* Contributors: mergify[bot]
-
-0.20.5 (2025-04-28)
--------------------
-* Use target_link_libraries instead of ament_target_dependencies (`#404 <https://github.com/ros2/examples/issues/404>`_)
-* Contributors: Shane Loretz
-
-0.20.4 (2024-12-20)
+0.19.7 (2025-10-17)
 -------------------
 
-0.20.3 (2024-11-20)
+0.19.6 (2025-08-06)
 -------------------
 
-0.20.2 (2024-07-29)
--------------------
-* Removed outdated comment (`#388 <https://github.com/ros2/examples/issues/388>`_)
-* Contributors: Alejandro Hernández Cordero
-
-0.20.1 (2024-06-17)
+0.19.5 (2025-04-02)
 -------------------
 
-0.20.0 (2024-04-26)
+0.19.4 (2024-06-27)
 -------------------
 
 0.19.3 (2024-04-16)

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.5)
 project(examples_rclcpp_minimal_action_server)
 
 # Default to C++17
@@ -17,16 +17,16 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
 
 add_executable(action_server_member_functions member_functions.cpp)
-target_link_libraries(action_server_member_functions PRIVATE
-  ${example_interfaces_TARGETS}
-  rclcpp::rclcpp
-  rclcpp_action::rclcpp_action)
+ament_target_dependencies(action_server_member_functions
+  "rclcpp"
+  "rclcpp_action"
+  "example_interfaces")
 
 add_executable(action_server_not_composable not_composable.cpp)
-target_link_libraries(action_server_not_composable PRIVATE
-  ${example_interfaces_TARGETS}
-  rclcpp::rclcpp
-  rclcpp_action::rclcpp_action)
+ament_target_dependencies(action_server_not_composable
+  "rclcpp"
+  "rclcpp_action"
+  "example_interfaces")
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

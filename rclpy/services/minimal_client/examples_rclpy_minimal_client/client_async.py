@@ -15,33 +15,33 @@
 from example_interfaces.srv import AddTwoInts
 
 import rclpy
-from rclpy.executors import ExternalShutdownException
 
 
 def main(args=None):
-    try:
-        with rclpy.init(args=args):
-            node = rclpy.create_node('minimal_client_async')
+    rclpy.init(args=args)
 
-            cli = node.create_client(AddTwoInts, 'add_two_ints')
+    node = rclpy.create_node('minimal_client_async')
 
-            req = AddTwoInts.Request()
-            req.a = 41
-            req.b = 1
-            while not cli.wait_for_service(timeout_sec=1.0):
-                node.get_logger().info('service not available, waiting again...')
+    cli = node.create_client(AddTwoInts, 'add_two_ints')
 
-            future = cli.call_async(req)
-            while rclpy.ok():
-                rclpy.spin_once(node)
-                if future.done():
-                    result = future.result()
-                    node.get_logger().info(
-                        'Result of add_two_ints: for %d + %d = %d' %
-                        (req.a, req.b, result.sum))
-                    break
-    except (KeyboardInterrupt, ExternalShutdownException):
-        pass
+    req = AddTwoInts.Request()
+    req.a = 41
+    req.b = 1
+    while not cli.wait_for_service(timeout_sec=1.0):
+        node.get_logger().info('service not available, waiting again...')
+
+    future = cli.call_async(req)
+    while rclpy.ok():
+        rclpy.spin_once(node)
+        if future.done():
+            result = future.result()
+            node.get_logger().info(
+                'Result of add_two_ints: for %d + %d = %d' %
+                (req.a, req.b, result.sum))
+            break
+
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

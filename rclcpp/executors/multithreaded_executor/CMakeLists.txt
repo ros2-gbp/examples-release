@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.5)
 project(examples_rclcpp_multithreaded_executor)
 
 # Default to C++17
@@ -16,7 +16,7 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
 add_executable(multithreaded_executor multithreaded_executor.cpp)
-target_link_libraries(multithreaded_executor PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
+ament_target_dependencies(multithreaded_executor rclcpp std_msgs)
 
 install(TARGETS
   multithreaded_executor

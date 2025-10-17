@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.5)
 project(examples_rclcpp_minimal_timer)
 
 # Default to C++17
@@ -15,10 +15,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
 add_executable(timer_lambda lambda.cpp)
-target_link_libraries(timer_lambda PRIVATE rclcpp::rclcpp)
+ament_target_dependencies(timer_lambda rclcpp)
 
 add_executable(timer_member_function member_function.cpp)
-target_link_libraries(timer_member_function PRIVATE rclcpp::rclcpp)
+ament_target_dependencies(timer_member_function rclcpp)
 
 install(TARGETS
   timer_lambda

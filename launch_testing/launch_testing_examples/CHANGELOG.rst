@@ -2,29 +2,18 @@
 Changelog for package launch_testing_examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.6 (2025-10-17)
+0.19.7 (2025-10-17)
 -------------------
-* Fix setuptools deprecations (`#421 <https://github.com/ros2/examples//issues/421>`_) (`#424 <https://github.com/ros2/examples//issues/424>`_)
+* Fix setuptools deprecations (backport `#421 <https://github.com/ros2/examples//issues/421>`_) (`#425 <https://github.com/ros2/examples//issues/425>`_)
 * Contributors: mergify[bot]
 
-0.20.5 (2025-04-28)
+0.19.6 (2025-08-06)
 -------------------
 
-0.20.4 (2024-12-20)
--------------------
-* Add test_xmllint.py. (`#401 <https://github.com/ros2/examples/issues/401>`_)
-* Contributors: Chris Lalancette
-
-0.20.3 (2024-11-20)
+0.19.5 (2025-04-02)
 -------------------
 
-0.20.2 (2024-07-29)
--------------------
-
-0.20.1 (2024-06-17)
--------------------
-
-0.20.0 (2024-04-26)
+0.19.4 (2024-06-27)
 -------------------
 
 0.19.3 (2024-04-16)

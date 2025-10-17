@@ -2,36 +2,22 @@
 Changelog for package examples_rclpy_minimal_publisher
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.20.6 (2025-10-17)
+0.19.7 (2025-10-17)
 -------------------
-* Fix setuptools deprecations (`#421 <https://github.com/ros2/examples//issues/421>`_) (`#424 <https://github.com/ros2/examples//issues/424>`_)
+* Fix setuptools deprecations (backport `#421 <https://github.com/ros2/examples//issues/421>`_) (`#425 <https://github.com/ros2/examples//issues/425>`_)
 * Contributors: mergify[bot]
 
-0.20.5 (2025-04-28)
--------------------
-* Address flake8 errors for examples_rclpy_minimal_publisher (`#410 <https://github.com/ros2/examples/issues/410>`_)
-* Add publisher_member_function_with_wait_for_all_acked.py (`#407 <https://github.com/ros2/examples/issues/407>`_)
-* Contributors: Tomoya Fujita
-
-0.20.4 (2024-12-20)
+0.19.6 (2025-08-06)
 -------------------
 
-0.20.3 (2024-11-20)
+0.19.5 (2025-04-02)
 -------------------
-* Add in ament_xmllint for the ament_python packages. (`#397 <https://github.com/ros2/examples/issues/397>`_)
-* Contributors: Chris Lalancette
+* add publisher_member_function_with_wait_for_all_acked.py. (backport `#407 <https://github.com/ros2/examples/issues/407>`_) (`#409 <https://github.com/ros2/examples/issues/409>`_)
+  * add publisher_member_function_with_wait_for_all_acked.py. (`#407 <https://github.com/ros2/examples/issues/407>`_)
+  (cherry picked from commit bea0186806239ed2e28958b62b6eacab3390e8d0)
+* Contributors: mergify[bot]
 
-0.20.2 (2024-07-29)
--------------------
-* Switch to using the rclpy context manager everywhere. (`#389 <https://github.com/ros2/examples/issues/389>`_)
-* Contributors: Chris Lalancette
-
-0.20.1 (2024-06-17)
--------------------
-* Update the shutdown handling in all of the Python examples. (`#379 <https://github.com/ros2/examples/issues/379>`_)
-* Contributors: Chris Lalancette
-
-0.20.0 (2024-04-26)
+0.19.4 (2024-06-27)
 -------------------
 
 0.19.3 (2024-04-16)

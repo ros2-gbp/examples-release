@@ -2,53 +2,21 @@
 Changelog for package examples_rclcpp_minimal_publisher
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.19.7 (2025-10-17)
+0.15.5 (2025-10-17)
 -------------------
 
-0.19.6 (2025-08-06)
+0.15.4 (2025-07-16)
 -------------------
-* wait 5 secs until all subscriptions acknowledge the messages. (`#414 <https://github.com/ros2/examples/issues/414>`_) (`#417 <https://github.com/ros2/examples/issues/417>`_)
-  (cherry picked from commit 2c917593d911c0035c354abcff6b1bb9b1aa7ffe)
-  Co-authored-by: Tomoya Fujita <Tomoya.Fujita@sony.com>
+* wait 5 secs until all subscriptions acknowledge the messages. (`#414 <https://github.com/ros2/examples/issues/414>`_) (`#418 <https://github.com/ros2/examples/issues/418>`_)
 * Contributors: mergify[bot]
 
-0.19.5 (2025-04-02)
+0.15.3 (2024-11-25)
 -------------------
 
-0.19.4 (2024-06-27)
+0.15.2 (2024-07-26)
 -------------------
 
-0.19.3 (2024-04-16)
--------------------
-
-0.19.2 (2024-03-28)
--------------------
-
-0.19.1 (2023-07-11)
--------------------
-
-0.19.0 (2023-04-27)
--------------------
-
-0.18.0 (2023-04-11)
--------------------
-
-0.17.1 (2023-03-01)
--------------------
-
-0.17.0 (2023-02-14)
--------------------
-* Update the examples to C++17. (`#353 <https://github.com/ros2/examples/issues/353>`_)
-* [rolling] Update maintainers - 2022-11-07 (`#352 <https://github.com/ros2/examples/issues/352>`_)
-* Contributors: Audrow Nash, Chris Lalancette
-
-0.16.2 (2022-11-02)
--------------------
-
-0.16.1 (2022-09-13)
--------------------
-
-0.16.0 (2022-04-29)
+0.15.1 (2022-11-07)
 -------------------
 
 0.15.0 (2022-03-01)

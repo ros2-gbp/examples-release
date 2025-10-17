@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_pointcloud_publisher'
 
 setup(
     name=package_name,
-    version='0.15.4',
+    version='0.15.5',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -17,7 +17,11 @@ setup(
     maintainer_email='aditya.pande@openrobotics.org, shane@openrobotics.org',
     description='Example on how to publish a Pointcloud2 message',
     license='Apache 2.0',
-    tests_require=['pytest'],
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
     entry_points={
         'console_scripts': [
             'pointcloud_publisher = examples_rclpy_pointcloud_publisher.pointcloud_publisher:main'

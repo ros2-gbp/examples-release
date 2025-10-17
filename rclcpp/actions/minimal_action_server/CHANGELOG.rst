@@ -2,19 +2,10 @@
 Changelog for package examples_rclcpp_minimal_action_server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.21.3 (2025-10-17)
+0.20.6 (2025-10-17)
 -------------------
-
-0.21.2 (2025-07-29)
--------------------
-* Fix CMAKE deprecation (`#419 <https://github.com/ros2/examples/issues/419>`_)
-* Contributors: mosfet80
-
-0.21.1 (2025-07-01)
--------------------
-
-0.21.0 (2025-04-28)
--------------------
+* Fix CMAKE deprecation (`#419 <https://github.com/ros2/examples//issues/419>`_) (`#420 <https://github.com/ros2/examples//issues/420>`_)
+* Contributors: mergify[bot]
 
 0.20.5 (2025-04-28)
 -------------------

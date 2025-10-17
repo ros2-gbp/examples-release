@@ -2,19 +2,10 @@
 Changelog for package examples_rclpy_minimal_publisher
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.21.3 (2025-10-17)
+0.20.6 (2025-10-17)
 -------------------
-
-0.21.2 (2025-07-29)
--------------------
-* Fix setuptools deprecations (`#421 <https://github.com/ros2/examples/issues/421>`_)
-* Contributors: mosfet80
-
-0.21.1 (2025-07-01)
--------------------
-
-0.21.0 (2025-04-28)
--------------------
+* Fix setuptools deprecations (`#421 <https://github.com/ros2/examples//issues/421>`_) (`#424 <https://github.com/ros2/examples//issues/424>`_)
+* Contributors: mergify[bot]
 
 0.20.5 (2025-04-28)
 -------------------

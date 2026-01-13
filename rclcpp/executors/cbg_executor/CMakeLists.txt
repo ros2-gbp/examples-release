@@ -1,9 +1,10 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 project(examples_rclcpp_cbg_executor)
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -20,7 +21,7 @@ add_executable(
   src/examples_rclcpp_cbg_executor/ping_node.cpp
 )
 target_include_directories(ping PUBLIC include)
-ament_target_dependencies(ping rclcpp std_msgs)
+target_link_libraries(ping PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
 
 add_executable(
   pong
@@ -28,7 +29,7 @@ add_executable(
   src/examples_rclcpp_cbg_executor/pong_node.cpp
 )
 target_include_directories(pong PUBLIC include)
-ament_target_dependencies(pong rclcpp std_msgs)
+target_link_libraries(pong PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
 
 add_executable(
   ping_pong
@@ -37,7 +38,7 @@ add_executable(
   src/examples_rclcpp_cbg_executor/pong_node.cpp
 )
 target_include_directories(ping_pong PUBLIC include)
-ament_target_dependencies(ping_pong rclcpp std_msgs)
+target_link_libraries(ping_pong PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
 
 install(TARGETS ping pong ping_pong
   DESTINATION lib/${PROJECT_NAME}

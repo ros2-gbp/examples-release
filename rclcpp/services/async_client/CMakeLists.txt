@@ -1,9 +1,10 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 project(examples_rclcpp_async_client)
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -15,7 +16,7 @@ find_package(example_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 
 add_executable(client_main main.cpp)
-ament_target_dependencies(client_main rclcpp example_interfaces)
+target_link_libraries(client_main PRIVATE rclcpp::rclcpp ${example_interfaces_TARGETS})
 
 install(TARGETS client_main
   DESTINATION lib/${PROJECT_NAME})

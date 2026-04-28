@@ -355,5 +355,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros2/examples.git
-    version: 0.21.5
-    version_saved: :{auto}
+    version: :{auto}

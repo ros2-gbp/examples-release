@@ -2,6 +2,11 @@
 Changelog for package examples_rclpy_executors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.22.0 (2026-05-07)
+-------------------
+* Rename spin_once to _spin_once_impl in custom executor (`#447 <https://github.com/ros2/examples/issues/447>`_)
+* Contributors: Noel Jiménez García
+
 0.21.5 (2026-03-24)
 -------------------
 

@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_minimal_publisher'
 
 setup(
     name=package_name,
-    version='0.22.0',
+    version='0.22.1',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -24,7 +24,7 @@ setup(
         'Topic :: Software Development',
     ],
     description='Examples of minimal publishers using rclpy.',
-    license='Apache License, Version 2.0',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',
@@ -32,7 +32,6 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'publisher_old_school = examples_rclpy_minimal_publisher.publisher_old_school:main',
             'publisher_local_function ='
             ' examples_rclpy_minimal_publisher.publisher_local_function:main',
             'publisher_member_function ='

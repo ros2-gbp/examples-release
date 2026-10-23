@@ -4,17 +4,18 @@
   schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
   <name>examples_rclcpp_wait_set</name>
-  <version>0.22.0</version>
+  <version>0.22.1</version>
   <description>Example of how to use the rclcpp::WaitSet directly.</description>
 
   <maintainer email="aditya.pande@openrobotics.org">Aditya Pande</maintainer>
   <maintainer email="alejandro@openrobotics.org">Alejandro Hernandez Cordero</maintainer>
 
-  <license>Apache License 2.0</license>
+  <license>Apache-2.0</license>
 
   <author email="william@openrobotics.org">William Woodall</author>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_ros_core</buildtool_depend>
 
   <build_depend>example_interfaces</build_depend>
   <build_depend>rclcpp</build_depend>

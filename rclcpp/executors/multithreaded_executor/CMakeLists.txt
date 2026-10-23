@@ -16,7 +16,7 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
 add_executable(multithreaded_executor multithreaded_executor.cpp)
-target_link_libraries(multithreaded_executor PRIVATE rclcpp::rclcpp std_msgs::std_msgs)
+target_link_libraries(multithreaded_executor PRIVATE rclcpp::rclcpp ${std_msgs_TARGETS})
 
 install(TARGETS
   multithreaded_executor

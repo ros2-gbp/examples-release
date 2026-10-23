@@ -2,30 +2,13 @@
 Changelog for package examples_rclpy_executors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.21.6 (2026-10-23)
+0.20.7 (2026-10-23)
 -------------------
-* Rename spin_once to _spin_once_impl in custom executor (`#447 <https://github.com/ros2/examples/issues/447>`_) (`#448 <https://github.com/ros2/examples/issues/448>`_)
+
+0.20.6 (2025-10-17)
+-------------------
+* Fix setuptools deprecations (`#421 <https://github.com/ros2/examples//issues/421>`_) (`#424 <https://github.com/ros2/examples//issues/424>`_)
 * Contributors: mergify[bot]
-
-0.21.5 (2026-03-24)
--------------------
-
-0.21.4 (2026-01-13)
--------------------
-
-0.21.3 (2025-10-17)
--------------------
-
-0.21.2 (2025-07-29)
--------------------
-* Fix setuptools deprecations (`#421 <https://github.com/ros2/examples/issues/421>`_)
-* Contributors: mosfet80
-
-0.21.1 (2025-07-01)
--------------------
-
-0.21.0 (2025-04-28)
--------------------
 
 0.20.5 (2025-04-28)
 -------------------

@@ -134,11 +134,9 @@ int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
   auto action_client = std::make_shared<MinimalActionClient>();
-  rclcpp::executors::SingleThreadedExecutor executor;
-  executor.add_node(action_client);
 
   while (!action_client->is_goal_done()) {
-    executor.spin_some();
+    rclcpp::spin_some(action_client);
   }
 
   rclcpp::shutdown();

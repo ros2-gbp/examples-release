@@ -2,32 +2,17 @@
 Changelog for package launch_testing_examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.21.6 (2026-10-23)
+0.20.7 (2026-10-23)
 -------------------
-* Run tests with RMW isolation (`#451 <https://github.com/ros2/examples/issues/451>`_) (`#452 <https://github.com/ros2/examples/issues/452>`_)
+* Use std_msgs String in check_msgs_launch_test on Kilted (`#475 <https://github.com/ros2/examples/issues/475>`_)
+* Run tests with RMW isolation (`#451 <https://github.com/ros2/examples/issues/451>`_) (`#453 <https://github.com/ros2/examples/issues/453>`_)
+* improve test integrity with rmw_cyclonedds_cpp. (`#440 <https://github.com/ros2/examples/issues/440>`_) (`#443 <https://github.com/ros2/examples/issues/443>`_)
+* Contributors: mergify[bot], yadunund
+
+0.20.6 (2025-10-17)
+-------------------
+* Fix setuptools deprecations (`#421 <https://github.com/ros2/examples//issues/421>`_) (`#424 <https://github.com/ros2/examples//issues/424>`_)
 * Contributors: mergify[bot]
-
-0.21.5 (2026-03-24)
--------------------
-* improve test integrity with rmw_cyclonedds_cpp. (`#440 <https://github.com/ros2/examples/issues/440>`_)
-* Contributors: Tomoya Fujita
-
-0.21.4 (2026-01-13)
--------------------
-
-0.21.3 (2025-10-17)
--------------------
-
-0.21.2 (2025-07-29)
--------------------
-* Fix setuptools deprecations (`#421 <https://github.com/ros2/examples/issues/421>`_)
-* Contributors: mosfet80
-
-0.21.1 (2025-07-01)
--------------------
-
-0.21.0 (2025-04-28)
--------------------
 
 0.20.5 (2025-04-28)
 -------------------

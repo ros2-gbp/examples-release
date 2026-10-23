@@ -15,11 +15,7 @@
 #include <functional>
 #include <memory>
 
-#include "rclcpp/executors.hpp"
-#include "rclcpp/logging.hpp"
-#include "rclcpp/node.hpp"
-#include "rclcpp/subscription.hpp"
-#include "rclcpp/utilities.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
 using std::placeholders::_1;

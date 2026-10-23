@@ -18,9 +18,7 @@
 #include <cmath>
 
 #include <chrono>
-#include <cstdint>
 #include <functional>
-#include <numeric>
 #include <string>
 #include <thread>
 #include <vector>
@@ -43,7 +41,7 @@
   #include <pthread.h>
 #endif
 
-#include "rclcpp/node.hpp"
+#include <rclcpp/rclcpp.hpp>
 
 namespace examples_rclcpp_cbg_executor
 {

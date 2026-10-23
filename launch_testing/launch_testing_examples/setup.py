@@ -4,7 +4,7 @@ package_name = 'launch_testing_examples'
 
 setup(
     name=package_name,
-    version='0.22.1',
+    version='0.21.6',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -16,7 +16,7 @@ setup(
     maintainer='Aditya Pande, Alejandro Hernandez Cordero',
     maintainer_email='aditya.pande@openrobotics.org, alejandro@openrobotics.org',
     description='Examples of simple launch tests',
-    license='Apache-2.0',
+    license='Apache License 2.0',
     extras_require={
         'test': [
             'pytest',

@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_guard_conditions'
 
 setup(
     name=package_name,
-    version='0.22.1',
+    version='0.21.6',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
@@ -21,7 +21,7 @@ setup(
         'Topic :: Software Development',
     ],
     description='Examples of using guard conditions.',
-    license='Apache-2.0',
+    license='Apache License, Version 2.0',
     extras_require={
         'test': [
             'pytest',

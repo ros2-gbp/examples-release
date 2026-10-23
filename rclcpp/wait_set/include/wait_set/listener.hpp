@@ -15,12 +15,7 @@
 #ifndef WAIT_SET__LISTENER_HPP_
 #define WAIT_SET__LISTENER_HPP_
 
-#include <thread>
-
-#include "rclcpp/node.hpp"
-#include "rclcpp/node_options.hpp"
-#include "rclcpp/subscription.hpp"
-#include "rclcpp/wait_set.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "wait_set/visibility.h"
 

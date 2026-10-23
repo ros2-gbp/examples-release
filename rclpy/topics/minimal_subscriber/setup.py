@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_minimal_subscriber'
 
 setup(
     name=package_name,
-    version='0.22.1',
+    version='0.21.6',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -24,7 +24,7 @@ setup(
         'Topic :: Software Development',
     ],
     description='Examples of minimal subscribers using rclpy.',
-    license='Apache-2.0',
+    license='Apache License, Version 2.0',
     extras_require={
         'test': [
             'pytest',
@@ -32,6 +32,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'subscriber_old_school ='
+            ' examples_rclpy_minimal_subscriber.subscriber_old_school:main',
             'subscriber_lambda = examples_rclpy_minimal_subscriber.subscriber_lambda:main',
             'subscriber_member_function ='
             ' examples_rclpy_minimal_subscriber.subscriber_member_function:main',

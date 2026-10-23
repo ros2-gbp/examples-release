@@ -13,16 +13,10 @@
 // limitations under the License.
 
 #include <chrono>
-#include <cstddef>
 #include <memory>
 #include <string>
 
-#include "rclcpp/executors.hpp"
-#include "rclcpp/logging.hpp"
-#include "rclcpp/node.hpp"
-#include "rclcpp/publisher.hpp"
-#include "rclcpp/timer.hpp"
-#include "rclcpp/utilities.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
 using namespace std::chrono_literals;

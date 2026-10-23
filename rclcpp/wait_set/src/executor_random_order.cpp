@@ -13,10 +13,9 @@
 // limitations under the License.
 
 #include <memory>
-#include <thread>
 
-#include "rclcpp/executors.hpp"
-#include "rclcpp/utilities.hpp"
+#include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/string.hpp"
 
 #include "wait_set/random_listener.hpp"
 #include "wait_set/random_talker.hpp"

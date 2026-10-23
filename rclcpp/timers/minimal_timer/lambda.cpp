@@ -15,11 +15,7 @@
 #include <chrono>
 #include <memory>
 
-#include "rclcpp/executors.hpp"
-#include "rclcpp/logging.hpp"
-#include "rclcpp/node.hpp"
-#include "rclcpp/timer.hpp"
-#include "rclcpp/utilities.hpp"
+#include "rclcpp/rclcpp.hpp"
 
 using namespace std::chrono_literals;
 

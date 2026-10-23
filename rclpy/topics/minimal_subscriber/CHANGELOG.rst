@@ -2,13 +2,7 @@
 Changelog for package examples_rclpy_minimal_subscriber
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.22.1 (2026-10-23)
--------------------
-* Remove old-school minimal subscriber example (`#466 <https://github.com/ros2/examples/issues/466>`_)
-* Use the SPDX identifier Apache-2.0 in license declarations (`#456 <https://github.com/ros2/examples/issues/456>`_)
-* Contributors: Koksal Berkay Denktas, Michael Carroll
-
-0.22.0 (2026-05-07)
+0.21.6 (2026-10-23)
 -------------------
 
 0.21.5 (2026-03-24)

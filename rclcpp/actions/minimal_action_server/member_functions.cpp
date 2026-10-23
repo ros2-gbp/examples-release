@@ -17,16 +17,8 @@
 #include <thread>
 
 #include "example_interfaces/action/fibonacci.hpp"
-#include "rclcpp/executors.hpp"
-#include "rclcpp/logging.hpp"
-#include "rclcpp/node.hpp"
-#include "rclcpp/node_options.hpp"
-#include "rclcpp/rate.hpp"
-#include "rclcpp/utilities.hpp"
-#include "rclcpp_action/create_server.hpp"
-#include "rclcpp_action/server.hpp"
-#include "rclcpp_action/server_goal_handle.hpp"
-#include "rclcpp_action/types.hpp"
+#include "rclcpp/rclcpp.hpp"
+#include "rclcpp_action/rclcpp_action.hpp"
 
 class MinimalActionServer : public rclcpp::Node
 {

@@ -15,9 +15,7 @@
 #include <memory>
 #include "minimal_composition/publisher_node.hpp"
 #include "minimal_composition/subscriber_node.hpp"
-#include "rclcpp/executors/single_threaded_executor.hpp"
-#include "rclcpp/node_options.hpp"
-#include "rclcpp/utilities.hpp"
+#include "rclcpp/rclcpp.hpp"
 
 int main(int argc, char * argv[])
 {

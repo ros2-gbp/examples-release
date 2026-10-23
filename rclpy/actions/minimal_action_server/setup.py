@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_minimal_action_server'
 
 setup(
     name=package_name,
-    version='0.22.1',
+    version='0.21.6',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -24,7 +24,7 @@ setup(
         'Topic :: Software Development',
     ],
     description='Examples of action servers using rclpy.',
-    license='Apache-2.0',
+    license='Apache License, Version 2.0',
     extras_require={
         'test': [
             'pytest',
@@ -34,6 +34,7 @@ setup(
         'console_scripts': [
             'server = ' + package_name + '.server:main',
             'server_defer = ' + package_name + '.server_defer:main',
+            'server_not_composable = ' + package_name + '.server_not_composable:main',
             'server_queue_goals = ' + package_name + '.server_queue_goals:main',
             'server_single_goal = ' + package_name + '.server_single_goal:main',
         ],

@@ -13,8 +13,7 @@
 // limitations under the License.
 
 #include "minimal_composition/subscriber_node.hpp"
-#include "rclcpp/logging.hpp"
-#include "rclcpp/node_options.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
 SubscriberNode::SubscriberNode(rclcpp::NodeOptions options)

@@ -15,17 +15,11 @@
 #ifndef WAIT_SET__RANDOM_TALKER_HPP_
 #define WAIT_SET__RANDOM_TALKER_HPP_
 
-#include <algorithm>
-#include <chrono>
 #include <cstdlib>
-#include <functional>
 #include <random>
 #include <vector>
 
-#include "rclcpp/logging.hpp"
-#include "rclcpp/node.hpp"
-#include "rclcpp/publisher.hpp"
-#include "rclcpp/timer.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
 class RandomTalker : public rclcpp::Node

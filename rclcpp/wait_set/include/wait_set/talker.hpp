@@ -15,12 +15,7 @@
 #ifndef WAIT_SET__TALKER_HPP_
 #define WAIT_SET__TALKER_HPP_
 
-#include <cstddef>
-
-#include "rclcpp/node.hpp"
-#include "rclcpp/node_options.hpp"
-#include "rclcpp/publisher.hpp"
-#include "rclcpp/timer.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "wait_set/visibility.h"
 

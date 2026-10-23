@@ -15,12 +15,7 @@
 #ifndef MINIMAL_COMPOSITION__PUBLISHER_NODE_HPP_
 #define MINIMAL_COMPOSITION__PUBLISHER_NODE_HPP_
 
-#include <cstddef>
-
-#include "rclcpp/node.hpp"
-#include "rclcpp/node_options.hpp"
-#include "rclcpp/publisher.hpp"
-#include "rclcpp/timer.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "minimal_composition/visibility.h"
 

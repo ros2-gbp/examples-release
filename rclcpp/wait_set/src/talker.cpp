@@ -13,11 +13,9 @@
 // limitations under the License.
 
 #include <chrono>
-#include <string>
 
 #include "wait_set/talker.hpp"
-#include "rclcpp/logging.hpp"
-#include "rclcpp/node_options.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
 using namespace std::chrono_literals;

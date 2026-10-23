@@ -17,13 +17,11 @@
 
 #include <chrono>
 #include <memory>
+#include <string>
+#include <utility>
 #include <vector>
 
-#include "rclcpp/node.hpp"
-#include "rclcpp/publisher.hpp"
-#include "rclcpp/subscription.hpp"
-#include "rclcpp/time.hpp"
-#include "rclcpp/timer.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/int32.hpp"
 
 namespace examples_rclcpp_cbg_executor

@@ -2,13 +2,7 @@
 Changelog for package examples_rclpy_minimal_publisher
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.22.1 (2026-10-23)
--------------------
-* Use the SPDX identifier Apache-2.0 in license declarations (`#456 <https://github.com/ros2/examples/issues/456>`_)
-* Deleted publisher_old_school example from examples_rclpy_minimal_publisher (`#471 <https://github.com/ros2/examples/issues/471>`_)
-* Contributors: Michael Carroll, Rajat Arora
-
-0.22.0 (2026-05-07)
+0.21.6 (2026-10-23)
 -------------------
 
 0.21.5 (2026-03-24)

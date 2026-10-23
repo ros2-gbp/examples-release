@@ -4,7 +4,7 @@ package_name = 'examples_rclpy_executors'
 
 setup(
     name=package_name,
-    version='0.22.1',
+    version='0.21.6',
     packages=['examples_rclpy_executors'],
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
@@ -23,7 +23,7 @@ setup(
         'Topic :: Software Development',
     ],
     description='Examples of creating and using exectors to run multiple nodes in rclpy.',
-    license='Apache-2.0',
+    license='Apache License, Version 2.0',
     extras_require={
         'test': [
             'pytest',

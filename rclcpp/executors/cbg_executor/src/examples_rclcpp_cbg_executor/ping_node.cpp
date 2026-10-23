@@ -14,14 +14,10 @@
 
 #include "examples_rclcpp_cbg_executor/ping_node.hpp"
 
-#include <chrono>
-#include <cstddef>
+#include <algorithm>
 #include <functional>
 #include <memory>
 #include <vector>
-
-#include "rclcpp/logging.hpp"
-#include "rclcpp/qos.hpp"
 
 #include "./utilities.hpp"
 

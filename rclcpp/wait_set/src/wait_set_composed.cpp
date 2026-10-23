@@ -15,9 +15,7 @@
 #include <memory>
 #include "wait_set/talker.hpp"
 #include "wait_set/listener.hpp"
-#include "rclcpp/executors/single_threaded_executor.hpp"
-#include "rclcpp/node_options.hpp"
-#include "rclcpp/utilities.hpp"
+#include "rclcpp/rclcpp.hpp"
 
 int main(int argc, char * argv[])
 {

@@ -1,12 +1,17 @@
 cmake_minimum_required(VERSION 3.20)
 project(examples_rclcpp_cbg_executor)
 
+# Default to C++17
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+endif()
+
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 find_package(ament_cmake REQUIRED)
-find_package(ament_cmake_ros_core REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
@@ -16,7 +21,7 @@ add_executable(
   src/examples_rclcpp_cbg_executor/ping_node.cpp
 )
 target_include_directories(ping PUBLIC include)
-target_link_libraries(ping PRIVATE rclcpp::rclcpp std_msgs::std_msgs ament_cmake_ros_core::ament_ros_defaults)
+target_link_libraries(ping PRIVATE rclcpp::rclcpp std_msgs::std_msgs)
 
 add_executable(
   pong
@@ -24,7 +29,7 @@ add_executable(
   src/examples_rclcpp_cbg_executor/pong_node.cpp
 )
 target_include_directories(pong PUBLIC include)
-target_link_libraries(pong PRIVATE rclcpp::rclcpp std_msgs::std_msgs ament_cmake_ros_core::ament_ros_defaults)
+target_link_libraries(pong PRIVATE rclcpp::rclcpp std_msgs::std_msgs)
 
 add_executable(
   ping_pong
@@ -33,7 +38,7 @@ add_executable(
   src/examples_rclcpp_cbg_executor/pong_node.cpp
 )
 target_include_directories(ping_pong PUBLIC include)
-target_link_libraries(ping_pong PRIVATE rclcpp::rclcpp std_msgs::std_msgs ament_cmake_ros_core::ament_ros_defaults)
+target_link_libraries(ping_pong PRIVATE rclcpp::rclcpp std_msgs::std_msgs)
 
 install(TARGETS ping pong ping_pong
   DESTINATION lib/${PROJECT_NAME}
